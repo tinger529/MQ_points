@@ -25,16 +25,31 @@ class MQpoint extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 30),
-                // add a box
                 SizedBox(
                   width: 300,
                   height: 50,
                   child: TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Username',
+                      labelText: 'Student ID',
                     ),
                   ),
+                ),
+                SizedBox(height: 30),
+                SizedBox(
+                  width: 300,
+                  height: 50,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Password',
+                    ),
+                  ),
+                ),
+                SizedBox(height: 30),
+                ElevatedButton(
+                  onPressed: null,
+                  child: Text('Login'),
                 ),
               ]
               )
