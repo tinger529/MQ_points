@@ -9,17 +9,35 @@ class MQpoint extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
             body: Container(
-              color: Color.fromARGB(255, 31, 153, 164),
+              color:const Color(0xFFBBE9F3),
               child: const Center(
-                child: Text(
-                  'MQPoint',
+                child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'User Login',
                   textDirection: TextDirection.ltr,
                   style: TextStyle(
                     color: Color.fromARGB(255, 2, 6, 9),
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
+                    fontFamily: "Italic",
                   ),
-                )
+                ),
+                SizedBox(height: 30),
+                // add a box
+                SizedBox(
+                  width: 300,
+                  height: 50,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Username',
+                    ),
+                  ),
+                ),
+              ]
+              )
               )
           )
       )
