@@ -18,8 +18,8 @@ class MQpoint extends StatelessWidget {
               color:const Color(0xFFBBE9F3),
               child: switch(state.pageStatus) {
                 "login" => const LoginScreen(),
-                "start" => const LoginScreen(),
-                _ => const LoginScreen(),
+                "start" => const FirstScreen(),
+                _ => const FirstScreen(),
                 }
               )
           );

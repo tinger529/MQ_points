@@ -8,6 +8,11 @@ class StateModel extends ChangeNotifier {
 
   StateModel() {
     _status = "start";
+    // set to login after 5 seconds
+    Future.delayed(Duration(seconds: 3), () {
+      _status = "login";
+      notifyListeners();
+    });
   }
 
   String get pageStatus => _status;
