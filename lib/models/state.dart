@@ -6,7 +6,11 @@ class StateModel extends ChangeNotifier {
   
   String _status = "start";   // quiz status flag
 
-  String get quizStatus => _status;
+  StateModel() {
+    _status = "start";
+  }
+
+  String get pageStatus => _status;
 
   void redirectLogin() {
     _status = "login";

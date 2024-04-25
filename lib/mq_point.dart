@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import 'package:mqpoint/screens/login_screen.dart';
 import 'package:mqpoint/screens/first_screen.dart';
+import 'models/state.dart';
 
 class MQpoint extends StatelessWidget {
   const MQpoint({super.key});
@@ -10,11 +11,19 @@ class MQpoint extends StatelessWidget {
   @override
   Widget build(context) {
     return MaterialApp(
-      home: Scaffold(
+      home: Consumer<StateModel>( 
+        builder: (context, state, child) {
+          return Scaffold(
             body: Container(
               color:const Color(0xFFBBE9F3),
-              child: const LoginScreen(),
-          )
+              child: switch(state.pageStatus) {
+                "login" => const LoginScreen(),
+                "start" => const LoginScreen(),
+                _ => const LoginScreen(),
+                }
+              )
+          );
+        }
       )
     );
   }
