@@ -1,8 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
-import '../../models/state.dart';
+import '../models/state.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -39,10 +40,10 @@ class LoginScreen extends StatelessWidget {
                     bottomRight: Radius.circular(20.0),
                   ),
                 ),
-                child: const Column(
+                child: Column(
                   children: [
-                    SizedBox(height: 50),
-                    SizedBox(
+                    const SizedBox(height: 50),
+                    const SizedBox(
                       width: 250,
                       height: 50,
                       child: TextField(
@@ -52,8 +53,8 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 30),
-                    SizedBox(
+                    const SizedBox(height: 30),
+                    const SizedBox(
                       width: 250,
                       height: 50,
                       child: TextField(
@@ -63,9 +64,9 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     ElevatedButton(
-                      onPressed: null,
+                      onPressed: state.redirectHome,
                       child: Text('Login'),
                     ),
                   ],
