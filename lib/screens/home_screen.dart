@@ -30,10 +30,10 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     const SizedBox(height: 20),
-                    const Text(
-                      'MQ POINTS: 100',
+                    Text(
+                      'MQ POINTS: ${state.currentPoints}',
                       textDirection: TextDirection.ltr,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Color.fromARGB(255, 2, 6, 9),
                         fontSize: 24,
                         fontWeight: FontWeight.bold,

@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 class StateModel extends ChangeNotifier {
   
   String _status = "start";   // quiz status flag
+  int points = 100;
 
   StateModel() {
     _status = "start";
@@ -16,6 +17,8 @@ class StateModel extends ChangeNotifier {
   }
 
   String get pageStatus => _status;
+
+  int get currentPoints => points;
 
   void redirectLogin() {
     _status = "login";
