@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           const SizedBox(height: 50),
           const Text(
-            'User Login',
+            'MQ POINTS',
             textDirection: TextDirection.ltr,
             style: TextStyle(
               color: Color.fromARGB(255, 2, 6, 9),

@@ -22,8 +22,9 @@ class StateModel extends ChangeNotifier {
   }
 
   void redirectHome() {
-    _status = "main";
+    _status = "home";
     notifyListeners();
   }
+
   
 }
