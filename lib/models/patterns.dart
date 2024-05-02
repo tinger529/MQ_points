@@ -14,7 +14,7 @@ Container buildContainer(state, String txt, {Color colour = const Color(0xFF6FC5
         ),
       ),
       child: OutlinedButton(
-          onPressed: state.redirectHome,
+          onPressed: state.redirectRedemption,
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),

@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:mqpoint/screens/login_screen.dart';
 import 'package:mqpoint/screens/first_screen.dart';
 import 'package:mqpoint/screens/home_screen.dart';
+import 'package:mqpoint/screens/redemption_screen.dart';
 import 'models/state.dart';
 
 class MQpoint extends StatelessWidget {
@@ -21,6 +22,7 @@ class MQpoint extends StatelessWidget {
                 "login" => const LoginScreen(),
                 "start" => const FirstScreen(),
                 "home" => const HomeScreen(),
+                "redemption" => const RedemptionScreen(),
                 _ => const FirstScreen(),
                 }
               )

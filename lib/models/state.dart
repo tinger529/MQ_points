@@ -29,5 +29,10 @@ class StateModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  void redirectRedemption() {
+    _status = "redemption";
+    notifyListeners();
+  }
+
   
 }
