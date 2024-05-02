@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    buildContainer(state, "Redeem Now!"),
+                    buildContainerA(state, "Redeem Now!"),
                     const SizedBox(height: 20),
                     const SizedBox(
                       width: double.infinity,
@@ -58,7 +58,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                     ),
                     const SizedBox(height: 20),
-                    buildContainer(state, 'Recent sales', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                    buildContainerB(state, 'Recent sales', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
                     const SizedBox(height: 20),
                     const SizedBox(
                       width: double.infinity,
@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                     ),
                       const SizedBox(height: 20),
-                      buildContainer(state, 'Earn points', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                      buildContainerB(state, 'Earn points', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
                       const SizedBox(height: 10),
                       Image.asset(
                         'assets/image/toolbar.png',

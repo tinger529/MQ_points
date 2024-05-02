@@ -11,12 +11,16 @@ class RedemptionScreen extends StatelessWidget {
   Widget build(context) {
     return Consumer<StateModel>(
       builder: (context, state, child) {
+
         return Center(
+
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const SizedBox(height: 10),
-              Container(
+
+              const SizedBox(height: 10), // padding on top
+
+              Container(  // white box in the center
                 width: 300.0,
                 height: 620.0,
                 decoration: const BoxDecoration(
@@ -28,10 +32,12 @@ class RedemptionScreen extends StatelessWidget {
                     bottomRight: Radius.circular(20.0),
                   ),
                 ),
+
                 child: Column(
                   children: [
                     const SizedBox(height: 20),
-                    Text(
+
+                    Text(   // MQ points counter
                       'MQ POINTS: ${state.currentPoints}',
                       textDirection: TextDirection.ltr,
                       style: const TextStyle(
@@ -41,9 +47,10 @@ class RedemptionScreen extends StatelessWidget {
                         fontFamily: "Italic",
                       ),
                     ),
+                    
                     const SizedBox(height: 20),
-                    const SizedBox(height: 20),
-                    const SizedBox(
+
+                    const SizedBox(   // Display text
                       width: double.infinity,
                       child: Text(
                           "   March special",
@@ -56,11 +63,18 @@ class RedemptionScreen extends StatelessWidget {
                           ),
                         ),
                     ),
+
                     const SizedBox(height: 20),
-                    buildContainer(state, 'Recent sales', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
-                    buildContainer(state, 'Recent sales', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+
+                    buildContainerB(state, 'Recent sales', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+
+                    const SizedBox(height: 10),
+
+                    buildContainerB(state, 'Recent sales', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+
                     const SizedBox(height: 20),
-                    const SizedBox(
+
+                    const SizedBox(   // Display text
                       width: double.infinity,
                       child: Text(
                           "  Popular",
@@ -73,21 +87,25 @@ class RedemptionScreen extends StatelessWidget {
                           ),
                         ),
                     ),
-                      const SizedBox(height: 20),
-                      buildContainer(state, 'Popular', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
-                      const SizedBox(height: 10),
-                      Image.asset(
-                        'assets/image/toolbar.png',
-                        width: 500,
-                        height: 50,
-                        opacity: const AlwaysStoppedAnimation(.8),
-                      ),
+
+                    const SizedBox(height: 20),
+
+                    buildContainerB(state, 'Popular', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                      
+                    const SizedBox(height: 10),
+                      
+                    Image.asset(
+                      'assets/image/toolbar.png',
+                      width: 500,
+                      height: 50,
+                      opacity: const AlwaysStoppedAnimation(.8),
+                    ),
                   ],
                 ),
               ),
             ]
-      )
-    );
+          )
+        );
       }
     );
   }
