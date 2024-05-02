@@ -20,16 +20,26 @@ Container buildContainer(state, String txt, {Color colour = const Color(0xFF6FC5
               borderRadius: BorderRadius.circular(20.0),
             ),
           ),
-          child: Text(
-            txt,
-            textDirection: TextDirection.ltr,
-            style: TextStyle(
-              color: fontColor,
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-              fontFamily: "Italic",
-            ),
-          ),
-        ),
-      );
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset(
+                'assets/image/gym.jpeg',
+                width: 240,
+                height: 100,
+                opacity: const AlwaysStoppedAnimation(.8),
+              ),
+              Text(
+              txt,
+              textDirection: TextDirection.ltr,
+              style: TextStyle(
+                color: fontColor,
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Italic",
+              ),
+              ),
+      ],
+    ),
+      ));
   }
