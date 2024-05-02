@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
                 width: 300.0,
                 height: 620.0,
                 decoration: const BoxDecoration(
-                  color: Colors.white,
+                  color: Color(0xFFF2FEFE),
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20.0),
                     topRight: Radius.circular(20.0),
@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    const SizedBox(height: 50),
+                    const SizedBox(height: 20),
                     const Text(
                       'MQ POINTS: 100',
                       textDirection: TextDirection.ltr,
@@ -164,10 +164,16 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                       ),
+                      const SizedBox(height: 10),
+                      Image.asset(
+                        'assets/image/toolbar.png',
+                        width: 500,
+                        height: 50,
+                        opacity: const AlwaysStoppedAnimation(.8),
+                      ),
                   ],
                 ),
               ),
-              const SizedBox(height: 20),
             ]
       )
     );
