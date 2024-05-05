@@ -39,5 +39,8 @@ class StateModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  
+  void redirectEvent() {
+    _status = "event";
+    notifyListeners();
+  }
 }
