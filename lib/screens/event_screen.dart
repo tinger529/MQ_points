@@ -38,58 +38,30 @@ class EventScreen extends StatelessWidget {
 
                     const SizedBox(height: 50),
 
-                    buildContainerE(state, "home", 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
-
-                    const SizedBox(height: 20),
-
                     const SizedBox(   // Display text
                       width: double.infinity,
                       child: Text(
-                          "      Earn Points",
+                          "    Earn Points",
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             color: Color.fromARGB(255, 2, 6, 9),
                             fontSize: 16,
-                            fontFamily: "Italic",
-                          ),
-                        ),
-                    ),
-
-                    const SizedBox(height: 10),
-
-                    const SizedBox(   // Display text
-                      width: double.infinity,
-                      child: Text(
-                          "       50 points",
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 248, 4, 4),
-                            fontSize: 16,
-                            //fontStyle: FontStyle.italic,
                             fontWeight: FontWeight.bold,
-                            fontFamily: "Italic",
                           ),
                         ),
                     ),
 
                     const SizedBox(height: 20),
 
-                    const SizedBox(   // Display text
-                      width: double.infinity,
-                      child: Text(
-                          "        Embrace the warmth and energy it\n        brings, igniting your day with a burst\n        of invigorating freshness.\n\n        Store: perfect cafe \n        Items: all coffee \n        Expiration date: May 20th, 2024",
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 2, 6, 9),
-                            fontSize: 13,
-                            fontFamily: "Italic",
-                          ),
-                        ),
-                    ),
+                    buildContainerB(state, "home", 'one day gym full access', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
 
                     const SizedBox(height: 20),
 
-                    buildContainerA(state, "home", 'Redeem Now!'),
+                    buildContainerB(state, "home", 'one day gym full access', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+
+                    const SizedBox(height: 20),
+
+                    buildContainerB(state, "home", 'one day gym full access', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
 
                     const SizedBox(height: 20),
 

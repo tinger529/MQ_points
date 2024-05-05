@@ -89,7 +89,7 @@ class ItemScreen extends StatelessWidget {
 
                     const SizedBox(height: 20),
 
-                    buildContainerA(state, "home", 'Redeem Now!'),
+                    buildContainerA(state, "voucher", 'Redeem Now!'),
 
                     const SizedBox(height: 20),
 
