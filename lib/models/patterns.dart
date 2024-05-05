@@ -83,8 +83,8 @@ Container buildContainerB(state, String txt, {Color colour = const Color(0xFFCFD
 // square containers for the item
 Container buildContainerC(state, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
     return Container(
-      width: 120.0,
-      height: 120.0,
+      width: 130.0,
+      height: 130.0,
       decoration: BoxDecoration(
         color: colour,
         borderRadius: const BorderRadius.only(
@@ -105,18 +105,16 @@ Container buildContainerC(state, String txt, {Color colour = const Color(0xFFCFD
             mainAxisSize: MainAxisSize.min,
             children: [
               Image.asset(
-                'assets/image/gym.jpeg',
+                'assets/image/coffee.png',
                 width: 120,
                 height: 80,
-                opacity: const AlwaysStoppedAnimation(.8),
               ),
               Text(
               txt,
               textDirection: TextDirection.ltr,
               style: TextStyle(
                 color: fontColor,
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
+                fontSize: 10,
                 fontFamily: "Italic",
               ),
               ),

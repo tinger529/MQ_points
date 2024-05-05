@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 10),
               Container(
                 width: 300.0,
-                height: 620.0,
+                height: 650.0,
                 decoration: const BoxDecoration(
                   color: Color(0xFFF2FEFE),
                   borderRadius: BorderRadius.only(

@@ -22,7 +22,7 @@ class RedemptionScreen extends StatelessWidget {
 
               Container(  // white box in the center
                 width: 300.0,
-                height: 620.0,
+                height: 650.0,
                 decoration: const BoxDecoration(
                   color: Color(0xFFF2FEFE),
                   borderRadius: BorderRadius.only(
@@ -66,11 +66,11 @@ class RedemptionScreen extends StatelessWidget {
 
                     const SizedBox(height: 20),
 
-                    buildContainerD(state, 'Recent sales', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                    buildContainerD(state, 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
 
                     const SizedBox(height: 10),
 
-                    buildContainerD(state, 'Recent sales', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                    buildContainerD(state, 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
 
                     const SizedBox(height: 20),
 
