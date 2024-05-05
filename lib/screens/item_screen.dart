@@ -35,16 +35,37 @@ class ItemScreen extends StatelessWidget {
 
                 child: Column(
                   children: [
+
+                    const SizedBox(height: 50),
+
+                    buildContainerE(state, 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+
                     const SizedBox(height: 20),
 
                     const SizedBox(   // Display text
                       width: double.infinity,
                       child: Text(
-                          "   March special",
+                          "      Coffee 50% off coupon",
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             color: Color.fromARGB(255, 2, 6, 9),
                             fontSize: 16,
+                            fontFamily: "Italic",
+                          ),
+                        ),
+                    ),
+
+                    const SizedBox(height: 10),
+
+                    const SizedBox(   // Display text
+                      width: double.infinity,
+                      child: Text(
+                          "       50 points",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 248, 4, 4),
+                            fontSize: 16,
+                            //fontStyle: FontStyle.italic,
                             fontWeight: FontWeight.bold,
                             fontFamily: "Italic",
                           ),
@@ -53,19 +74,14 @@ class ItemScreen extends StatelessWidget {
 
                     const SizedBox(height: 20),
 
-                    buildContainerB(state, 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
-
-                    const SizedBox(height: 10),
-
                     const SizedBox(   // Display text
                       width: double.infinity,
                       child: Text(
-                          "  Popular",
+                          "        Embrace the warmth and energy it\n        brings, igniting your day with a burst\n        of invigorating freshness.\n\n        Store: perfect cafe \n        Items: all coffee \n        Expiration date: May 20th, 2024",
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             color: Color.fromARGB(255, 2, 6, 9),
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
+                            fontSize: 13,
                             fontFamily: "Italic",
                           ),
                         ),
@@ -73,15 +89,15 @@ class ItemScreen extends StatelessWidget {
 
                     const SizedBox(height: 20),
 
-                    buildContainerD(state, 'Popular', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
-                      
-                    const SizedBox(height: 10),
-                      
+                    buildContainerA(state.redirectHome, 'Redeem Now!'),
+
+                    const SizedBox(height: 20),
+
                     Image.asset(
                       'assets/image/toolbar.png',
-                      width: 500,
-                      height: 50,
-                      opacity: const AlwaysStoppedAnimation(.8),
+                        width: 500,
+                        height: 50,
+                        opacity: const AlwaysStoppedAnimation(.8),
                     ),
                   ],
                 ),

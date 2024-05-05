@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // container for redemption buttons and show QR code buttons
-Container buildContainerA(state, String txt, {Color colour = const Color(0xFF6FC5C5), Color fontColor = const Color(0xFFA83759)}) {
+Container buildContainerA(func, String txt, {Color colour = const Color(0xFF6FC5C5), Color fontColor = const Color(0xFFA83759)}) {
     return Container(
       width: 240.0,
       height: 120.0,
@@ -15,7 +15,7 @@ Container buildContainerA(state, String txt, {Color colour = const Color(0xFF6FC
         ),
       ),
       child: OutlinedButton(
-          onPressed: state.redirectRedemption,
+          onPressed: () => {func()},
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
@@ -133,4 +133,39 @@ Row buildContainerD(state, String txt, {Color colour = const Color(0xFFCFDEE0), 
         buildContainerC(state, txt, colour: colour, fontColor: fontColor),
       ],
     );
+  }
+
+// container for the item
+Container buildContainerE(state, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
+    return Container(
+      width: 250.0,
+      height: 160.0,
+      decoration: BoxDecoration(
+        color: colour,
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(20.0),
+          topRight: Radius.circular(20.0),
+          bottomLeft: Radius.circular(20.0),
+          bottomRight: Radius.circular(20.0),
+        ),
+      ),
+      child: OutlinedButton(
+          onPressed: state.redirectItem,
+          style: OutlinedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset(
+                'assets/image/coffee2.png',
+                width: 240,
+                height: 160,
+                opacity: const AlwaysStoppedAnimation(.8),
+              ),
+      ],
+    ),
+      ));
   }

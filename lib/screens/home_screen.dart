@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    buildContainerA(state, "Redeem Now!"),
+                    buildContainerA(state.redirectRedemption, "Redeem Now!"),
                     const SizedBox(height: 20),
                     const SizedBox(
                       width: double.infinity,
