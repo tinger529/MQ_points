@@ -10,6 +10,7 @@ class LoginScreen extends StatelessWidget {
 
   String passwd = "";
   String id = "";
+  bool fail = false;
   
   @override
   Widget build(context) {
@@ -46,6 +47,20 @@ class LoginScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     const SizedBox(height: 50),
+                    fail ? 
+                      const SizedBox(
+                        width: double.infinity,
+                        child: Text(
+                          "         Login failed, please try again",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 246, 2, 2),
+                            fontSize: 8,
+                          ),
+                        ),
+                      )
+                     : const SizedBox(),
+                    const SizedBox(height: 3),
                     SizedBox(
                       width: 250,
                       height: 50,
@@ -60,6 +75,18 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 30),
+                    const SizedBox(   // Display text
+                      width: double.infinity,
+                      child: Text(
+                          "         please insert your password",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 246, 2, 2),
+                            fontSize: 8,
+                          ),
+                        ),
+                    ),
+                    const SizedBox(height: 3),
                     SizedBox(
                       width: 250,
                       height: 50,
@@ -76,7 +103,8 @@ class LoginScreen extends StatelessWidget {
                     const SizedBox(height: 30),
                     ElevatedButton(
                       onPressed: () => {
-                        state.login(id, passwd)
+                        state.login(id, passwd),
+                        fail = true
                       },
                       child: const Text('Login'),
                     ),
