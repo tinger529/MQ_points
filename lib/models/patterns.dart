@@ -95,7 +95,7 @@ Container buildContainerC(state, String txt, {Color colour = const Color(0xFFCFD
         ),
       ),
       child: OutlinedButton(
-          onPressed: state.redirectRedemption,
+          onPressed: state.redirectItem,
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),

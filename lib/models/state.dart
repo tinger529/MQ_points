@@ -10,7 +10,7 @@ class StateModel extends ChangeNotifier {
   StateModel() {
     _status = "start";
     // set to login after 5 seconds
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       _status = "login";
       notifyListeners();
     });
@@ -31,6 +31,11 @@ class StateModel extends ChangeNotifier {
 
   void redirectRedemption() {
     _status = "redemption";
+    notifyListeners();
+  }
+
+  void redirectItem() {
+    _status = "item";
     notifyListeners();
   }
 
