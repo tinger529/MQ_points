@@ -6,7 +6,10 @@ import 'package:provider/provider.dart';
 import '../models/state.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+  LoginScreen({super.key});
+
+  String passwd = "";
+  String id = "";
   
   @override
   Widget build(context) {
@@ -43,31 +46,39 @@ class LoginScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     const SizedBox(height: 50),
-                    const SizedBox(
+                    SizedBox(
                       width: 250,
                       height: 50,
                       child: TextField(
-                        decoration: InputDecoration(
+                        onChanged: (text) {
+                          id = text;
+                        },
+                        decoration: const InputDecoration(
                           border: OutlineInputBorder(),
                           labelText: 'Student ID',
                         ),
                       ),
                     ),
                     const SizedBox(height: 30),
-                    const SizedBox(
+                    SizedBox(
                       width: 250,
                       height: 50,
                       child: TextField(
-                        decoration: InputDecoration(
+                        onChanged: (text) {
+                          passwd = text;
+                        },
+                        decoration: const InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: 'Password',
+                          labelText: 'Password'
                         ),
                       ),
                     ),
                     const SizedBox(height: 30),
                     ElevatedButton(
-                      onPressed: state.redirectHome,
-                      child: Text('Login'),
+                      onPressed: () => {
+                        state.login(id, passwd)
+                      },
+                      child: const Text('Login'),
                     ),
                   ],
                 ),

@@ -6,6 +6,7 @@ class StateModel extends ChangeNotifier {
   
   String _status = "start";   // quiz status flag
   int points = 100;
+  int nvouchers = 1; 
 
   StateModel() {
     _status = "start";
@@ -19,6 +20,15 @@ class StateModel extends ChangeNotifier {
   String get pageStatus => _status;
 
   int get currentPoints => points;
+
+  int get currentVouchers => nvouchers;
+
+  void login(String id, String passwd) {
+    if (id != "" && passwd != "") {
+      _status = "home";
+      notifyListeners();
+    }
+  }
 
   void redirect(String page){
     _status = page;
