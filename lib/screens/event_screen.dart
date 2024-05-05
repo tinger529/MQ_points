@@ -38,7 +38,7 @@ class EventScreen extends StatelessWidget {
 
                     const SizedBox(height: 50),
 
-                    buildContainerE(state, 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                    buildContainerE(state, "home", 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
 
                     const SizedBox(height: 20),
 
@@ -89,7 +89,7 @@ class EventScreen extends StatelessWidget {
 
                     const SizedBox(height: 20),
 
-                    buildContainerA(state.redirectHome, 'Redeem Now!'),
+                    buildContainerA(state, "home", 'Redeem Now!'),
 
                     const SizedBox(height: 20),
 

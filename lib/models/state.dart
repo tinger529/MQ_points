@@ -20,6 +20,11 @@ class StateModel extends ChangeNotifier {
 
   int get currentPoints => points;
 
+  void redirect(String page){
+    _status = page;
+    notifyListeners();
+  }
+
   void redirectLogin() {
     _status = "login";
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // container for redemption buttons and show QR code buttons
-Container buildContainerA(func, String txt, {Color colour = const Color(0xFF6FC5C5), Color fontColor = const Color(0xFFA83759)}) {
+Container buildContainerA(state, String page, String txt, {Color colour = const Color(0xFF6FC5C5), Color fontColor = const Color(0xFFA83759)}) {
     return Container(
       width: 240.0,
       height: 120.0,
@@ -15,7 +15,7 @@ Container buildContainerA(func, String txt, {Color colour = const Color(0xFF6FC5
         ),
       ),
       child: OutlinedButton(
-          onPressed: () => {func()},
+          onPressed: () => {state.redirect(page)},
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
@@ -36,7 +36,7 @@ Container buildContainerA(func, String txt, {Color colour = const Color(0xFF6FC5
   }
 
 // container for sale events and earning points events
-Container buildContainerB(state, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
+Container buildContainerB(state, String page, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
     return Container(
       width: 240.0,
       height: 120.0,
@@ -50,7 +50,7 @@ Container buildContainerB(state, String txt, {Color colour = const Color(0xFFCFD
         ),
       ),
       child: OutlinedButton(
-          onPressed: state.redirectRedemption,
+          onPressed: () => {state.redirect(page)},
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
@@ -81,7 +81,7 @@ Container buildContainerB(state, String txt, {Color colour = const Color(0xFFCFD
   }
 
 // square containers for the item
-Container buildContainerC(state, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
+Container buildContainerC(state, String page, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
     return Container(
       width: 130.0,
       height: 130.0,
@@ -95,7 +95,7 @@ Container buildContainerC(state, String txt, {Color colour = const Color(0xFFCFD
         ),
       ),
       child: OutlinedButton(
-          onPressed: state.redirectItem,
+          onPressed: () => {state.redirect(page)},
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
@@ -124,19 +124,19 @@ Container buildContainerC(state, String txt, {Color colour = const Color(0xFFCFD
   } 
 
 // two container C side by side 
-Row buildContainerD(state, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
+Row buildContainerD(state, String page, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        buildContainerC(state, txt, colour: colour, fontColor: fontColor),
+        buildContainerC(state, page, txt, colour: colour, fontColor: fontColor),
         const SizedBox(width: 15),
-        buildContainerC(state, txt, colour: colour, fontColor: fontColor),
+        buildContainerC(state, page, txt, colour: colour, fontColor: fontColor),
       ],
     );
   }
 
 // container for the item
-Container buildContainerE(state, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
+Container buildContainerE(state, String page, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
     return Container(
       width: 250.0,
       height: 160.0,
@@ -150,7 +150,7 @@ Container buildContainerE(state, String txt, {Color colour = const Color(0xFFCFD
         ),
       ),
       child: OutlinedButton(
-          onPressed: state.redirectItem,
+          onPressed: () => {state.redirect(page)},
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),

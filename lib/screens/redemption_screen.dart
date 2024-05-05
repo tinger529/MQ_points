@@ -66,11 +66,11 @@ class RedemptionScreen extends StatelessWidget {
 
                     const SizedBox(height: 20),
 
-                    buildContainerD(state, 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                    buildContainerD(state, "item", 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
 
                     const SizedBox(height: 10),
 
-                    buildContainerD(state, 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                    buildContainerD(state, "item", 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
 
                     const SizedBox(height: 20),
 
@@ -90,7 +90,7 @@ class RedemptionScreen extends StatelessWidget {
 
                     const SizedBox(height: 20),
 
-                    buildContainerD(state, 'Popular', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                    buildContainerD(state, "item", 'Popular', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
                       
                     const SizedBox(height: 10),
                       
