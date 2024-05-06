@@ -74,6 +74,7 @@ flutter:
     - assets/image/vouchers.png
     - assets/image/barcode.png
     - assets/image/user.png
+    - assets/image/mq-campus-map.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

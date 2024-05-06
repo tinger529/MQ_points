@@ -4,8 +4,10 @@ import 'package:provider/provider.dart';
 import '../models/state.dart';
 import '../models/patterns.dart';
 
-class SettingScreen extends StatelessWidget {
-  const SettingScreen({super.key});
+class StoreScreen extends StatelessWidget {
+  StoreScreen({super.key});
+
+  String k = "";
   
   @override
   Widget build(BuildContext context) {
@@ -36,41 +38,39 @@ class SettingScreen extends StatelessWidget {
                       children: [
                         const SizedBox(height: 30),
 
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
+                        const Text(
+                          "Explore MQ points",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 2, 6, 9),
+                            fontSize: 16,
+                          ),
+                        ),
 
-                            Image.asset(
-                              'assets/image/user.png',
-                              width: 100,
-                              height: 100,
-                            ),
+                        const SizedBox(height: 30),
 
-                            const SizedBox(width: 30),
-                            
-                            const Text(
-                              "User name\nid:12345678\npoints: 100",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 2, 6, 9),
-                                fontSize: 16,
-                              ),
+                        SizedBox(
+                          width: 250,
+                          height: 50,
+                          child: TextField(
+                            onChanged: (text) {
+                              k = text;
+                            },
+                            decoration: const InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Search...',
+                              fillColor: Color(0xFFE0F0F0),
                             ),
-                          ],
+                          ),
                         ),
 
                         Image.asset(
-                          'assets/image/barcode.png',
-                          width: 200,
-                          height: 150,
+                          'assets/image/mq-campus-map.png',
+                          width: 300,
+                          height: 300,
                           opacity: const AlwaysStoppedAnimation(.8),
                         ),
 
-                        buildContainerF(state, "history", "History"),
-
-                        const SizedBox(height: 10),
-
-                        buildContainerF(state, "contact", "Contact Us"),
                       ],
                     ),
                   ),
