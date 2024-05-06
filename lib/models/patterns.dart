@@ -182,6 +182,43 @@ Container buildContainerE(state, String page, String txt, {Color colour = const 
       ));
   }
 
+// container for setting buttons
+Container buildContainerF(state, String page, String txt, {Color colour = const Color(0xFFE0F0F0), Color fontColor = const Color(0xFF7C8081)}) {
+    return Container(
+      width: 240.0,
+      height: 60.0,
+      decoration: BoxDecoration(
+        color: colour,
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(20.0),
+          topRight: Radius.circular(20.0),
+          bottomLeft: Radius.circular(20.0),
+          bottomRight: Radius.circular(20.0),
+        ),
+      ),
+      child: OutlinedButton(
+          onPressed: () => {state.redirect(page)},
+          style: OutlinedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            side: const BorderSide(
+              color: Colors.transparent,
+            ),
+          ),
+          child: Text(
+              txt,
+              textDirection: TextDirection.ltr,
+              style: TextStyle(
+                color: fontColor,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+              ),
+    ),
+      );
+  }
+
 // tool
 Container tool(state, String page, String pth) {
     return Container(
