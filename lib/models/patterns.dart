@@ -182,10 +182,10 @@ Container buildContainerE(state, String page, String txt, {Color colour = const 
       ));
   }
 
-// tool button
-Container tool(state, String page) {
+// tool
+Container tool(state, String page, String pth) {
     return Container(
-      width: 500.0,
+      width: 50.0,
       height: 50.0,
       decoration: const BoxDecoration(
         color: Color(0xFFF2FEFE),
@@ -194,22 +194,40 @@ Container tool(state, String page) {
           onPressed: () => {state.redirect(page)},
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.0),
+              borderRadius: BorderRadius.circular(1.0),
             ),
             side: const BorderSide(
               color: Colors.transparent,
             ),
+            padding: EdgeInsets.zero,
           ),
           child: Column(
-            mainAxisSize: MainAxisSize.min,
+            //mainAxisSize: MainAxisSize.min,
             children: [
               Image.asset(
-                'assets/image/toolbar.png',
-                width: 500,
+                pth,
+                width: 50,
                 height: 50,
-                opacity: const AlwaysStoppedAnimation(.8),
               ),
       ],
     ),
       ));
+  }
+
+// tool bar container
+Row toolbar(state) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        tool(state, "home", 'assets/image/home.png'),
+        const SizedBox(width: 3),
+        tool(state, "redemption", "assets/image/shopping.png"),
+        const SizedBox(width: 3),
+        tool(state, "item", "assets/image/vouchers.png"),
+        const SizedBox(width: 3),
+        tool(state, "stores", "assets/image/stores.png"),
+        const SizedBox(width: 3),
+        tool(state, "setting", "assets/image/settings.png"),
+      ],
+    );
   }

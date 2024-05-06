@@ -67,6 +67,11 @@ flutter:
     - assets/image/gym.jpeg
     - assets/image/coffee.png
     - assets/image/coffee2.png
+    - assets/image/home.png
+    - assets/image/settings.png
+    - assets/image/shopping.png
+    - assets/image/stores.png
+    - assets/image/vouchers.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
