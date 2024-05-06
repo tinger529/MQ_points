@@ -169,3 +169,32 @@ Container buildContainerE(state, String page, String txt, {Color colour = const 
     ),
       ));
   }
+
+// tool button
+Container tool(state, String page) {
+    return Container(
+      width: 500.0,
+      height: 50.0,
+      decoration: const BoxDecoration(
+        color: Color(0xFFF2FEFE),
+      ),
+      child: OutlinedButton(
+          onPressed: () => {state.redirect(page)},
+          style: OutlinedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset(
+                'assets/image/toolbar.png',
+                width: 500,
+                height: 50,
+                opacity: const AlwaysStoppedAnimation(.8),
+              ),
+      ],
+    ),
+      ));
+  }

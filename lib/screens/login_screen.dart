@@ -47,7 +47,7 @@ class LoginScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     const SizedBox(height: 50),
-                    fail ? 
+                     
                       const SizedBox(
                         width: double.infinity,
                         child: Text(
@@ -58,8 +58,7 @@ class LoginScreen extends StatelessWidget {
                             fontSize: 8,
                           ),
                         ),
-                      )
-                     : const SizedBox(),
+                      ),
                     const SizedBox(height: 3),
                     SizedBox(
                       width: 250,
