@@ -9,8 +9,11 @@ class VoucherScreen extends StatelessWidget {
   
   @override
   Widget build(context) {
+
     return Consumer<StateModel>(
       builder: (context, state, child) {
+
+        var vouchers = state.currentVouchers;
 
         return Center(
 
@@ -66,11 +69,9 @@ class VoucherScreen extends StatelessWidget {
 
                     const SizedBox(height: 20),
 
-                    buildContainerD(state, "item", 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
-
-                    const SizedBox(height: 10),
-
-                    buildContainerD(state, "item", 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                    ...vouchers.map((v) {
+                      return buildContainerD(state, "item", v.getName, colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2));
+                    }),
 
                     const SizedBox(height: 20),
 

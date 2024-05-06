@@ -1,12 +1,19 @@
 import 'dart:collection';
 
 import 'package:flutter/foundation.dart';
+import 'package:mqpoint/models/voucher_model.dart';
 
 class StateModel extends ChangeNotifier {
   
-  String _status = "start";   // quiz status flag
+  String _status = "start";
+
+  // temporarily store user's data here
   int points = 100;
-  int nvouchers = 1; 
+  int nvouchers = 2; 
+  List<Voucher> vouchers = [
+    const Voucher("      Coffee 50% off coupon", 100, "This is a voucher"),
+  //  const Voucher("      Coffee 50% off coupon", 100, "This is a voucher"),
+  ];
 
   StateModel() {
     _status = "start";
@@ -19,9 +26,9 @@ class StateModel extends ChangeNotifier {
 
   String get pageStatus => _status;
 
-  int get currentPoints => points;
+  List<Voucher> get currentVouchers => UnmodifiableListView(vouchers);
 
-  int get currentVouchers => nvouchers;
+  int get currentPoints => points;
 
   void login(String id, String passwd) {
     if (id != "" && passwd != "") {
