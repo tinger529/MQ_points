@@ -223,7 +223,7 @@ Row toolbar(state) {
         const SizedBox(width: 3),
         tool(state, "redemption", "assets/image/shopping.png"),
         const SizedBox(width: 3),
-        tool(state, "item", "assets/image/vouchers.png"),
+        tool(state, "voucher", "assets/image/vouchers.png"),
         const SizedBox(width: 3),
         tool(state, "stores", "assets/image/stores.png"),
         const SizedBox(width: 3),
