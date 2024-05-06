@@ -29,7 +29,7 @@ class MQpoint extends StatelessWidget {
                 "item" => const ItemScreen(),
                 "event" => const EventScreen(),
                 "voucher" => const VoucherScreen(),
-                _ => const FirstScreen(),
+                _ => const HomeScreen(),
                 }
               )
           );

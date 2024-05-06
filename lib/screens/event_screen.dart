@@ -65,12 +65,7 @@ class EventScreen extends StatelessWidget {
 
                     const SizedBox(height: 20),
 
-                    Image.asset(
-                      'assets/image/toolbar.png',
-                        width: 500,
-                        height: 50,
-                        opacity: const AlwaysStoppedAnimation(.8),
-                    ),
+                    toolbar(state),
                   ],
                 ),
               ),

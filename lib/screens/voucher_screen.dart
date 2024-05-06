@@ -94,12 +94,7 @@ class VoucherScreen extends StatelessWidget {
                       
                     const SizedBox(height: 10),
                       
-                    Image.asset(
-                      'assets/image/toolbar.png',
-                      width: 500,
-                      height: 50,
-                      opacity: const AlwaysStoppedAnimation(.8),
-                    ),
+                    toolbar(state),
                   ],
                 ),
               ),
