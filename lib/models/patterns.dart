@@ -20,6 +20,9 @@ Container buildContainerA(state, String page, String txt, {Color colour = const 
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
             ),
+            side: const BorderSide(
+              color: Colors.transparent,
+            ),
           ),
           child: Text(
               txt,
@@ -54,6 +57,9 @@ Container buildContainerB(state, String page, String txt, {Color colour = const 
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
+            ),
+            side: const BorderSide(
+              color: Colors.transparent,
             ),
           ),
           child: Column(
@@ -99,6 +105,9 @@ Container buildContainerC(state, String page, String txt, {Color colour = const 
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
+            ),
+            side: const BorderSide(
+              color: Colors.transparent,
             ),
           ),
           child: Column(
@@ -155,6 +164,9 @@ Container buildContainerE(state, String page, String txt, {Color colour = const 
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
             ),
+            side: const BorderSide(
+              color: Colors.transparent,
+            ),
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -183,6 +195,9 @@ Container tool(state, String page) {
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
+            ),
+            side: const BorderSide(
+              color: Colors.transparent,
             ),
           ),
           child: Column(
