@@ -13,6 +13,14 @@ Container buildContainerA(state, String page, String txt, {Color colour = const 
           bottomLeft: Radius.circular(20.0),
           bottomRight: Radius.circular(20.0),
         ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 4,
+            blurRadius: 5,
+            offset: const Offset(2, 2), // changes position of shadow
+          ),
+        ],
       ),
       child: OutlinedButton(
           onPressed: () => {state.redirect(page)},
@@ -51,6 +59,14 @@ Container buildContainerB(state, String page, String txt, {Color colour = const 
           bottomLeft: Radius.circular(20.0),
           bottomRight: Radius.circular(20.0),
         ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 3,
+            blurRadius: 5,
+            offset: const Offset(0, 3), // changes position of shadow
+          ),
+        ],
       ),
       child: OutlinedButton(
           onPressed: () => {state.redirect(page)},
@@ -186,7 +202,7 @@ Container buildContainerE(state, String page, String txt, {Color colour = const 
 Container buildContainerF(state, String page, String txt, {Color colour = const Color(0xFFE0F0F0), Color fontColor = const Color(0xFF7C8081)}) {
     return Container(
       width: 240.0,
-      height: 60.0,
+      height: 50.0,
       decoration: BoxDecoration(
         color: colour,
         borderRadius: const BorderRadius.only(
