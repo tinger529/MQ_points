@@ -65,6 +65,8 @@ flutter:
     - assets/image/coin.jpg
     - assets/image/toolbar.png
     - assets/image/gym.jpeg
+    - assets/image/gym.png
+    - assets/image/library.png
     - assets/image/coffee.png
     - assets/image/coffee2.png
     - assets/image/home.png

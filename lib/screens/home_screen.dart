@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
 
                       const SizedBox(height: 20),
 
-                      buildContainerB(state, "event", 'Recent sales', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                      buildContainerB(state, "event", 'One Day Gym Full Access! ...', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
                       
                       const SizedBox(height: 20),
 

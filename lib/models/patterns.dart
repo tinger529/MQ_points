@@ -77,14 +77,15 @@ Container buildContainerB(state, String page, String txt, {Color colour = const 
             side: const BorderSide(
               color: Colors.transparent,
             ),
+            padding: const EdgeInsets.all(10.0),
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Image.asset(
-                'assets/image/gym.jpeg',
-                width: 240,
-                height: 100,
+                'assets/image/gym.png',
+                width: 220,
+                height: 90,
                 opacity: const AlwaysStoppedAnimation(.8),
               ),
               Text(
@@ -93,7 +94,6 @@ Container buildContainerB(state, String page, String txt, {Color colour = const 
               style: TextStyle(
                 color: fontColor,
                 fontSize: 12,
-                fontWeight: FontWeight.bold,
                 fontFamily: "Italic",
               ),
               ),
