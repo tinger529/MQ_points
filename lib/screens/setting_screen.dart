@@ -78,7 +78,7 @@ class SettingScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 620,
+              top: 630,
               left: 40, 
               child: toolbar(state),
             ),

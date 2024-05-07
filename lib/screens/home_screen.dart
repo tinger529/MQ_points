@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
 
                       const SizedBox(height: 20),
 
-                      buildContainerB(state, "event", 'One Day Gym Full Access! ...', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                      buildContainerB(state, "event", 'One Day Gym Full Access! ...', 'assets/image/gym.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
                       
                       const SizedBox(height: 20),
 
@@ -83,7 +83,7 @@ class HomeScreen extends StatelessWidget {
 
                       const SizedBox(height: 20),
 
-                      buildContainerB(state, "event", 'Earn points', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                      buildContainerB(state, "event", 'Winning at most 1000 po...', 'assets/image/library.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
                     ],
                   ),
                 ),
@@ -91,7 +91,7 @@ class HomeScreen extends StatelessWidget {
             )
           ),
           Positioned(
-            top: 620,
+            top: 630,
             left: 40, 
             child: toolbar(state),
           ),

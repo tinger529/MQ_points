@@ -47,7 +47,7 @@ Container buildContainerA(state, String page, String txt, {Color colour = const 
   }
 
 // container for sale events and earning points events
-Container buildContainerB(state, String page, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
+Container buildContainerB(state, String page, String txt, String img, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
     return Container(
       width: 240.0,
       height: 120.0,
@@ -83,7 +83,7 @@ Container buildContainerB(state, String page, String txt, {Color colour = const 
             mainAxisSize: MainAxisSize.min,
             children: [
               Image.asset(
-                'assets/image/gym.png',
+                img,
                 width: 220,
                 height: 90,
                 opacity: const AlwaysStoppedAnimation(.8),
