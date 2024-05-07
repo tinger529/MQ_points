@@ -12,66 +12,71 @@ class EventScreen extends StatelessWidget {
     return Consumer<StateModel>(
       builder: (context, state, child) {
 
-        return Center(
+        return Stack(
+          children: [
 
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
+            Center(
 
-              const SizedBox(height: 10), // padding on top
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
 
-              Container(  // white box in the center
-                width: 300.0,
-                height: 650.0,
-                decoration: const BoxDecoration(
-                  color: Color(0xFFF2FEFE),
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20.0),
-                    topRight: Radius.circular(20.0),
-                    bottomLeft: Radius.circular(20.0),
-                    bottomRight: Radius.circular(20.0),
-                  ),
-                ),
+                  const SizedBox(height: 10), // padding on top
 
-                child: Column(
-                  children: [
-
-                    const SizedBox(height: 50),
-
-                    const SizedBox(   // Display text
-                      width: double.infinity,
-                      child: Text(
-                          "    Earn Points",
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 2, 6, 9),
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                  Container(  // white box in the center
+                    width: 300.0,
+                    height: 650.0,
+                    decoration: const BoxDecoration(
+                      color: Color(0xFFF2FEFE),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20.0),
+                        topRight: Radius.circular(20.0),
+                        bottomLeft: Radius.circular(20.0),
+                        bottomRight: Radius.circular(20.0),
+                      ),
                     ),
 
-                    const SizedBox(height: 20),
+                    child: Column(
+                      children: [
 
-                    buildContainerB(state, "home", 'one day gym full access', 'assets/image/gym.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                        const SizedBox(height: 30),
 
-                    const SizedBox(height: 20),
+                        const SizedBox(   // Display text
+                          width: double.infinity,
+                          child: Text(
+                              "    Recent Sales",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 2, 6, 9),
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                        ),
 
-                    buildContainerB(state, "home", 'one day gym full access', 'assets/image/gym.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                        const SizedBox(height: 30),
 
-                    const SizedBox(height: 20),
+                        buildContainerB(state, "home", 'one day gym full access', 'assets/image/gym.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
 
-                    buildContainerB(state, "home", 'one day gym full access', 'assets/image/gym.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                        const SizedBox(height: 30),
 
-                    const SizedBox(height: 20),
+                        buildContainerB(state, "home", 'one day gym full access', 'assets/image/gym.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
 
-                    toolbar(state),
-                  ],
+                        const SizedBox(height: 30),
+
+                        buildContainerB(state, "home", 'one day gym full access', 'assets/image/gym.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                      ],
+                  ),
                 ),
-              ),
-            ]
-          )
-        );
+              ]
+            )
+          ),
+          Positioned(
+            top: 630,
+            left: 40, 
+            child: toolbar(state),
+          ),
+        ]);
       }
     );
   }
