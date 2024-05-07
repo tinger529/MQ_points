@@ -86,7 +86,6 @@ Container buildContainerB(state, String page, String txt, String img, {Color col
                 img,
                 width: 220,
                 height: 90,
-                opacity: const AlwaysStoppedAnimation(.8),
               ),
               Text(
               txt,
@@ -105,8 +104,8 @@ Container buildContainerB(state, String page, String txt, String img, {Color col
 // square containers for the item
 Container buildContainerC(state, String page, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
     return Container(
-      width: 130.0,
-      height: 130.0,
+      width: 120.0,
+      height: 120.0,
       decoration: BoxDecoration(
         color: colour,
         borderRadius: const BorderRadius.only(
@@ -115,6 +114,14 @@ Container buildContainerC(state, String page, String txt, {Color colour = const 
           bottomLeft: Radius.circular(20.0),
           bottomRight: Radius.circular(20.0),
         ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 2,
+            blurRadius: 3,
+            offset: const Offset(1, 1), // changes position of shadow
+          ),
+        ],
       ),
       child: OutlinedButton(
           onPressed: () => {state.redirect(page)},
@@ -125,6 +132,7 @@ Container buildContainerC(state, String page, String txt, {Color colour = const 
             side: const BorderSide(
               color: Colors.transparent,
             ),
+            padding: const EdgeInsets.all(10.0),
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -134,6 +142,7 @@ Container buildContainerC(state, String page, String txt, {Color colour = const 
                 width: 120,
                 height: 80,
               ),
+              const SizedBox(height: 4),
               Text(
               txt,
               textDirection: TextDirection.ltr,
