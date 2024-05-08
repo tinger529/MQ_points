@@ -90,6 +90,7 @@ class HomeScreen extends StatelessWidget {
               ]
             )
           ),
+
           Positioned.fill(
             top: 600,
             child: Align(
@@ -97,6 +98,7 @@ class HomeScreen extends StatelessWidget {
               child: toolbar(state),               
             ),
           ),
+
         ]);
       }
     );

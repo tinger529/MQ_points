@@ -99,11 +99,36 @@ class ItemScreen extends StatelessWidget {
                   ]
                 )
               ),
+
               Positioned.fill(
                 top: 600,
                 child: Align(
                   alignment: Alignment.centerRight,
                   child: toolbar(state),               
+                ),
+              ),
+
+              Center(
+
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+
+                  Container(
+                    width: double.infinity,
+                    height: MediaQuery.of(context).size.height,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFD9D9D9).withOpacity(0.8),
+                    ),
+                    ),
+                  ]
+                )
+              ),
+
+              Positioned.fill(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: buildContainerG(state, "item", "Redeem successfully!")               
                 ),
               ),
             ]);
