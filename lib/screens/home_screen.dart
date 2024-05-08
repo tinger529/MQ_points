@@ -90,10 +90,12 @@ class HomeScreen extends StatelessWidget {
               ]
             )
           ),
-          Positioned(
-            top: 630,
-            left: 40, 
-            child: toolbar(state),
+          Positioned.fill(
+            top: 600,
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: toolbar(state),               
+            ),
           ),
         ]);
       }
