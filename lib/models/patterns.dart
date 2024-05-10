@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // container for redemption buttons and show QR code buttons
-Container buildContainerA(state, String page, String txt, {Color colour = const Color(0xFF6FC5C5), Color fontColor = const Color(0xFFA83759)}) {
+Container buildContainerA(state, String page, String txt, {Color colour = const Color(0xFF6FC5C5), Color fontColor = const Color(0xFFA83759), String arg = ""}) {
     return Container(
       width: 240.0,
       height: 120.0,
@@ -23,7 +23,7 @@ Container buildContainerA(state, String page, String txt, {Color colour = const 
         ],
       ),
       child: OutlinedButton(
-          onPressed: () => {state.redirect(page)},
+          onPressed: () => {state.redirect(page, arg: arg)},
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
@@ -245,7 +245,7 @@ Container buildContainerF(state, String page, String txt, {Color colour = const 
   }
 
 // container for the confirm message
-Container buildContainerG(state, String page, String txt, {Color colour = const Color(0xFFFDFBFB), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
+Container buildContainerG(state, String page, String txt, {Color colour = const Color(0xFFFDFBFB), Color fontColor = const Color.fromARGB(255, 7, 1, 2), String arg = ""}) {
     return Container(
       width: 240.0,
       height: 120.0,
@@ -259,7 +259,7 @@ Container buildContainerG(state, String page, String txt, {Color colour = const 
         ),
       ),
       child: OutlinedButton(
-          onPressed: () => {state.redirect(page)},
+          onPressed: () => {state.redirect(page, arg: arg)},
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),

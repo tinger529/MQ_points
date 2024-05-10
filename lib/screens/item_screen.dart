@@ -92,7 +92,7 @@ class ItemScreen extends StatelessWidget {
 
                         const SizedBox(height: 20),
 
-                        buildContainerA(state, "voucher", 'Redeem Now!'),
+                        buildContainerA(state, "item", 'Redeem Now!', arg: "buy"),
                       ],
                       ),
                     ),
@@ -108,6 +108,7 @@ class ItemScreen extends StatelessWidget {
                 ),
               ),
 
+              state.showSuccess ?
               Center(
 
               child: Column(
@@ -123,14 +124,17 @@ class ItemScreen extends StatelessWidget {
                     ),
                   ]
                 )
-              ),
+              )
+              : Container(),
 
+              state.showSuccess ? 
               Positioned.fill(
                 child: Align(
                   alignment: Alignment.center,
-                  child: buildContainerG(state, "item", "Redeem successfully!")               
+                  child: buildContainerG(state, "item", "Redeem successfully!", arg: "close")               
                 ),
-              ),
+              )
+              : Container(),
             ]);
           }
     );

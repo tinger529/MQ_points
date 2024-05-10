@@ -15,6 +15,9 @@ class StateModel extends ChangeNotifier {
   //  const Voucher("      Coffee 50% off coupon", 100, "This is a voucher"),
   ];
 
+  // showing successful message
+  bool show = false;
+
   StateModel() {
     _status = "start";
     // set to login after 5 seconds
@@ -30,6 +33,8 @@ class StateModel extends ChangeNotifier {
 
   int get currentPoints => points;
 
+  bool get showSuccess => show;
+
   void login(String id, String passwd) {
     if (id != "" && passwd != "") {
       _status = "home";
@@ -37,8 +42,24 @@ class StateModel extends ChangeNotifier {
     }
   }
 
-  void redirect(String page){
+  void special_handling(String page, String arg){
+    if(page == "item"){
+      if(show == false && arg == "buy" && points >= 50){
+        points -= 50;
+        vouchers.add(const Voucher("      Coffee 50% off coupon", 100, "This is a voucher"));
+        nvouchers++;
+        notifyListeners();
+        show = true;
+      }
+      if(arg == "close"){
+        show = false;
+      }
+    }
+  }
+
+  void redirect(String page, {String arg = ""}){
     _status = page;
+    special_handling(page, arg);
     notifyListeners();
   }
 
