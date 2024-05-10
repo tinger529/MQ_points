@@ -87,7 +87,10 @@ class VoucherScreen extends StatelessWidget {
                         return buildContainerD(state, "item", v[0].getName, colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2));
                       } 
                       else{
-                        return buildContainerC(state, "item", v[0].getName, colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2));
+                        return Align(
+                  alignment: Alignment.centerLeft,
+                  child: buildContainerC(state, "item", v[0].getName, colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2))               
+                );
                       }
                     }),
 
