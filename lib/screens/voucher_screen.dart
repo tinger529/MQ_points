@@ -3,9 +3,22 @@ import 'package:provider/provider.dart';
 
 import '../models/state.dart';
 import '../models/patterns.dart';
+import 'package:mqpoint/models/voucher_model.dart';
 
 class VoucherScreen extends StatelessWidget {
   const VoucherScreen({super.key});
+
+  List<List<Voucher>> pair_vouchers(List<Voucher> vouchers){
+    List<List<Voucher>> pairs = [];
+    for(int i = 0; i < vouchers.length; i+=2){
+      if(i+1 < vouchers.length){
+        pairs.add([vouchers[i], vouchers[i+1]]);
+      } else {
+        pairs.add([vouchers[i]]);
+      }
+    }
+    return pairs;
+  }
   
   @override
   Widget build(context) {
@@ -13,7 +26,7 @@ class VoucherScreen extends StatelessWidget {
     return Consumer<StateModel>(
       builder: (context, state, child) {
 
-        var vouchers = state.currentVouchers;
+        var vouchers = pair_vouchers(state.currentVouchers);
 
         return Center(
 
@@ -70,7 +83,12 @@ class VoucherScreen extends StatelessWidget {
                     const SizedBox(height: 20),
 
                     ...vouchers.map((v) {
-                      return buildContainerD(state, "item", v.getName, colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2));
+                      if(v.length == 2){
+                        return buildContainerD(state, "item", v[0].getName, colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2));
+                      } 
+                      else{
+                        return buildContainerC(state, "item", v[0].getName, colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2));
+                      }
                     }),
 
                     const SizedBox(height: 20),
