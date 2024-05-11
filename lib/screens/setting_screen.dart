@@ -48,10 +48,10 @@ class SettingScreen extends StatelessWidget {
 
                             const SizedBox(width: 30),
                             
-                            const Text(
-                              "User name\nid:12345678\npoints: 100",
+                            Text(
+                              "User name\nid:12345678\npoints: ${state.currentPoints}",
                               textAlign: TextAlign.left,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Color.fromARGB(255, 2, 6, 9),
                                 fontSize: 16,
                               ),
@@ -63,7 +63,6 @@ class SettingScreen extends StatelessWidget {
                           'assets/image/barcode.png',
                           width: 200,
                           height: 150,
-                          opacity: const AlwaysStoppedAnimation(.8),
                         ),
 
                         buildContainerF(state, "history", "History"),
@@ -77,10 +76,12 @@ class SettingScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Positioned(
-              top: 630,
-              left: 40, 
-              child: toolbar(state),
+            Positioned.fill(
+              top: 600,
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: toolbar(state),               
+              ),
             ),
           ],
         );
