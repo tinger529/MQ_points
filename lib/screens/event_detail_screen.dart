@@ -26,6 +26,7 @@ class EventDetailScreen extends StatelessWidget {
                   Container(  // white box in the center
                     width: 300.0,
                     height: 650.0,
+                    padding: const EdgeInsets.only(left: 25, bottom: 24, right: 25, top: 10),
                     decoration: BoxDecoration(
                       color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFF2FEFE),
                       borderRadius: const BorderRadius.only(
@@ -39,16 +40,16 @@ class EventDetailScreen extends StatelessWidget {
                     child: Column(
                       children: [
 
-                        const SizedBox(height: 50),
+                        const SizedBox(height: 30),
 
-                        buildContainerE(state, "item", 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                        buildContainerH(state, "item", 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2), img: 'assets/image/gym.png'),
 
                         const SizedBox(height: 20),
 
                         SizedBox(   // Display text
                           width: double.infinity,
                           child: Text(
-                              "      Coffee 50% off coupon",
+                              "One Day Gym Full Access!\nWorkout with us!",
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 color: state.currentScene[2],
@@ -60,27 +61,12 @@ class EventDetailScreen extends StatelessWidget {
 
                         const SizedBox(height: 10),
 
-                        const SizedBox(   // Display text
-                          width: double.infinity,
-                          child: Text(
-                              "       50 points",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 248, 4, 4),
-                                fontSize: 16,
-                                //fontStyle: FontStyle.italic,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: "Italic",
-                              ),
-                            ),
-                        ),
-
                         const SizedBox(height: 20),
 
                         SizedBox(   // Display text
                           width: double.infinity,
                           child: Text(
-                              "        Embrace the warmth and energy it\n        brings, igniting your day with a burst\n        of invigorating freshness.\n\n        Store: perfect cafe \n        Items: all coffee \n        Expiration date: May 20th, 2024",
+                              "Dive into a world of health and wellness as you explore our state-of-the-art facilities and join invigorating group classes led by expert instructors. \n\nDiscover the motivation you need to kickstart your fitness journey and unlock your full potential. Don't miss this opportunity to sweat, smile, and transform your day, all on us!\n\nLocation: MQ sports center\ndate: May 1th, 2024 -\nMay 31th, 2024",
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 color: state.currentScene[2],
@@ -89,10 +75,6 @@ class EventDetailScreen extends StatelessWidget {
                               ),
                             ),
                         ),
-
-                        const SizedBox(height: 20),
-
-                        buildContainerA(state, "item", 'Redeem Now!', arg: "buy"),
                       ],
                       ),
                     ),

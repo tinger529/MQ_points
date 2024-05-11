@@ -182,7 +182,7 @@ Row buildContainerD_(state, String page, String txt, {Color colour = const Color
   }
 
 // container for the item
-Container buildContainerE(state, String page, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
+Container buildContainerE(state, String page, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2), String img = 'assets/image/coffee2.png'}) {
     return Container(
       width: 250.0,
       height: 160.0,
@@ -209,7 +209,7 @@ Container buildContainerE(state, String page, String txt, {Color colour = const 
             mainAxisSize: MainAxisSize.min,
             children: [
               Image.asset(
-                'assets/image/coffee2.png',
+                img,
                 width: 240,
                 height: 160,
                 opacity: const AlwaysStoppedAnimation(.8),
@@ -290,6 +290,43 @@ Container buildContainerG(state, String page, String txt, {Color colour = const 
               ),
     ),
       );
+  }
+
+Container buildContainerH(state, String page, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2), String img = 'assets/image/coffee2.png'}) {
+    return Container(
+      width: 250.0,
+      height: 140.0,
+      decoration: BoxDecoration(
+        color: colour,
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(20.0),
+          topRight: Radius.circular(20.0),
+          bottomLeft: Radius.circular(20.0),
+          bottomRight: Radius.circular(20.0),
+        ),
+      ),
+      child: OutlinedButton(
+          onPressed: () => {state.redirect(page)},
+          style: OutlinedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            side: const BorderSide(
+              color: Colors.transparent,
+            ),
+            padding: const EdgeInsets.all(5.0),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset(
+                img,
+                width: 240,
+                height: 140,
+              ),
+      ],
+    ),
+      ));
   }
 
 // tool
