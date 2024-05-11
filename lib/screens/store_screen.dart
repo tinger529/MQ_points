@@ -30,7 +30,7 @@ class StoreScreen extends StatelessWidget {
                     height: 650.0,
                     padding: const EdgeInsets.only(left: 25, bottom: 24, right: 25, top: 10),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFF2FEFE),
+                      color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFF2FEFE),
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     child: Column(
@@ -38,11 +38,11 @@ class StoreScreen extends StatelessWidget {
                       children: [
                         const SizedBox(height: 30),
 
-                        const Text(
+                        Text(
                           "Explore MQ points",
                           textAlign: TextAlign.left,
                           style: TextStyle(
-                            color: Color.fromARGB(255, 2, 6, 9),
+                            color: state.currentScene[2],
                             fontSize: 16,
                           ),
                         ),
@@ -56,10 +56,10 @@ class StoreScreen extends StatelessWidget {
                             onChanged: (text) {
                               k = text;
                             },
-                            decoration: const InputDecoration(
-                              border: OutlineInputBorder(),
+                            decoration: InputDecoration(
+                              border: const OutlineInputBorder(),
                               labelText: 'Search...',
-                              fillColor: Color(0xFFE0F0F0),
+                              fillColor: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFF2FEFE),
                             ),
                           ),
                         ),
@@ -77,10 +77,12 @@ class StoreScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Positioned(
-              top: 620,
-              left: 40, 
-              child: toolbar(state),
+            Positioned.fill(
+              top: 600,
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: toolbar(state),               
+              ),
             ),
           ],
         );

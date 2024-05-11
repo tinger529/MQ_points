@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
                   width: 300.0,
                   height: 650.0,
                   decoration: BoxDecoration(
-                    color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFCFDEE0),
+                    color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFF2FEFE),
                     borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(20.0),
                       topRight: Radius.circular(20.0),

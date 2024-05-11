@@ -26,9 +26,9 @@ class EventScreen extends StatelessWidget {
                   Container(  // white box in the center
                     width: 300.0,
                     height: 650.0,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFF2FEFE),
-                      borderRadius: BorderRadius.only(
+                    decoration: BoxDecoration(
+                      color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFF2FEFE),
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(20.0),
                         topRight: Radius.circular(20.0),
                         bottomLeft: Radius.circular(20.0),
@@ -41,13 +41,13 @@ class EventScreen extends StatelessWidget {
 
                         const SizedBox(height: 30),
 
-                        const SizedBox(   // Display text
+                        SizedBox(   // Display text
                           width: double.infinity,
                           child: Text(
                               "    Recent Sales",
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                color: Color.fromARGB(255, 2, 6, 9),
+                                color: state.currentScene[2],
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -71,10 +71,12 @@ class EventScreen extends StatelessWidget {
               ]
             )
           ),
-          Positioned(
-            top: 630,
-            left: 40, 
-            child: toolbar(state),
+          Positioned.fill(
+            top: 600,
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: toolbar(state),               
+            ),
           ),
         ]);
       }

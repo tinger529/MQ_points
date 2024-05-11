@@ -26,9 +26,9 @@ class ItemScreen extends StatelessWidget {
                   Container(  // white box in the center
                     width: 300.0,
                     height: 650.0,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFF2FEFE),
-                      borderRadius: BorderRadius.only(
+                    decoration: BoxDecoration(
+                      color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFF2FEFE),
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(20.0),
                         topRight: Radius.circular(20.0),
                         bottomLeft: Radius.circular(20.0),
@@ -41,17 +41,17 @@ class ItemScreen extends StatelessWidget {
 
                         const SizedBox(height: 50),
 
-                        buildContainerE(state, "home", 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                        buildContainerE(state, "item", 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
 
                         const SizedBox(height: 20),
 
-                        const SizedBox(   // Display text
+                        SizedBox(   // Display text
                           width: double.infinity,
                           child: Text(
                               "      Coffee 50% off coupon",
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                color: Color.fromARGB(255, 2, 6, 9),
+                                color: state.currentScene[2],
                                 fontSize: 16,
                                 fontFamily: "Italic",
                               ),
@@ -77,13 +77,13 @@ class ItemScreen extends StatelessWidget {
 
                         const SizedBox(height: 20),
 
-                        const SizedBox(   // Display text
+                        SizedBox(   // Display text
                           width: double.infinity,
                           child: Text(
                               "        Embrace the warmth and energy it\n        brings, igniting your day with a burst\n        of invigorating freshness.\n\n        Store: perfect cafe \n        Items: all coffee \n        Expiration date: May 20th, 2024",
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                color: Color.fromARGB(255, 2, 6, 9),
+                                color: state.currentScene[2],
                                 fontSize: 13,
                                 fontFamily: "Italic",
                               ),
