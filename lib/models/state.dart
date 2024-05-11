@@ -1,6 +1,7 @@
 import 'dart:collection';
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:mqpoint/models/voucher_model.dart';
 
 class StateModel extends ChangeNotifier {
@@ -20,6 +21,29 @@ class StateModel extends ChangeNotifier {
 
   // showing login fail message
   bool loginFail = false;
+
+  // background color, foreground color, font color
+  List<Color> darkScene = [
+    const Color(0xFFF2FEFE),
+    const Color.fromARGB(255, 0, 8, 10),
+    const Color.fromARGB(255, 245, 247, 248),
+  ];
+
+  // background color, foreground color, font color
+  List<Color> lightScene = [
+    const Color(0xFFF2FEFE),
+    const Color(0xFFBBE9F3),
+    const Color.fromARGB(255, 2, 6, 9),
+  ];
+
+  bool dark = false;
+
+  void toggleTheme(){
+    dark = !dark;
+    notifyListeners();
+  }
+
+  List<Color> get currentScene => dark ? darkScene : lightScene;
 
   StateModel() {
     _status = "start";
