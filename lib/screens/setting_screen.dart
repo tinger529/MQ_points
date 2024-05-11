@@ -70,6 +70,10 @@ class SettingScreen extends StatelessWidget {
                         const SizedBox(height: 10),
 
                         buildContainerF(state, "contact", "Contact Us"),
+
+                        const SizedBox(height: 10),
+
+                        buildContainerF(state, "setting", "Dark Mode", arg: "theme"),
                       ],
                     ),
                   ),

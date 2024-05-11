@@ -208,7 +208,7 @@ Container buildContainerE(state, String page, String txt, {Color colour = const 
   }
 
 // container for setting buttons
-Container buildContainerF(state, String page, String txt, {Color colour = const Color(0xFFE0F0F0), Color fontColor = const Color(0xFF7C8081)}) {
+Container buildContainerF(state, String page, String txt, {Color colour = const Color(0xFFE0F0F0), Color fontColor = const Color(0xFF7C8081), String arg = ""}) {
     return Container(
       width: 240.0,
       height: 50.0,
@@ -222,7 +222,7 @@ Container buildContainerF(state, String page, String txt, {Color colour = const 
         ),
       ),
       child: OutlinedButton(
-          onPressed: () => {state.redirect(page)},
+          onPressed: () => {state.redirect(page, arg: arg)},
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
@@ -285,8 +285,8 @@ Container tool(state, String page, String pth) {
     return Container(
       width: 50.0,
       height: 50.0,
-      decoration: const BoxDecoration(
-        color: Color(0xFFF2FEFE),
+      decoration: BoxDecoration(
+        color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFCFDEE0),
       ),
       child: OutlinedButton(
           onPressed: () => {state.redirect(page)},
@@ -314,7 +314,7 @@ Container tool(state, String page, String pth) {
 
 // tool bar container
 Row toolbar(state) {
-    return Row(
+    return state.currentTheme == false ? Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         tool(state, "home", 'assets/image/home.png'),
@@ -326,6 +326,20 @@ Row toolbar(state) {
         tool(state, "stores", "assets/image/stores.png"),
         const SizedBox(width: 3),
         tool(state, "setting", "assets/image/settings.png"),
+      ],
+    ) :
+    Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        tool(state, "home", 'assets/image/homeDark.png'),
+        const SizedBox(width: 3),
+        tool(state, "redemption", "assets/image/shoppingDark.png"),
+        const SizedBox(width: 3),
+        tool(state, "voucher", "assets/image/vouchersDark.png"),
+        const SizedBox(width: 3),
+        tool(state, "stores", "assets/image/storesDark.png"),
+        const SizedBox(width: 3),
+        tool(state, "setting", "assets/image/settingsDark.png"),
       ],
     );
   }

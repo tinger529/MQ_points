@@ -25,9 +25,9 @@ class HomeScreen extends StatelessWidget {
                 Container(
                   width: 300.0,
                   height: 650.0,
-                  decoration: const BoxDecoration(
-                    color: Color(0xFFF2FEFE),
-                    borderRadius: BorderRadius.only(
+                  decoration: BoxDecoration(
+                    color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFCFDEE0),
+                    borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(20.0),
                       topRight: Radius.circular(20.0),
                       bottomLeft: Radius.circular(20.0),
@@ -47,13 +47,13 @@ class HomeScreen extends StatelessWidget {
 
                       const SizedBox(height: 20),
 
-                      const SizedBox(
+                      SizedBox(
                         width: double.infinity,
                         child: Text(
                             "    Recent Sales",
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                              color: Color.fromARGB(255, 2, 6, 9),
+                              color: state.currentScene[2],
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                               fontFamily: "Italic",
@@ -67,13 +67,13 @@ class HomeScreen extends StatelessWidget {
                       
                       const SizedBox(height: 20),
 
-                      const SizedBox(
+                      SizedBox(
                         width: double.infinity,
                         child: Text(
                             "    Earn Points",
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                              color: Color.fromARGB(255, 2, 6, 9),
+                              color: state.currentScene[2],
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                               fontFamily: "Italic",

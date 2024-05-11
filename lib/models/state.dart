@@ -24,15 +24,15 @@ class StateModel extends ChangeNotifier {
 
   // background color, foreground color, font color
   List<Color> darkScene = [
-    const Color(0xFFF2FEFE),
-    const Color.fromARGB(255, 0, 8, 10),
+    const Color.fromARGB(255, 7, 3, 39),
+    const Color(0xFF073636),
     const Color.fromARGB(255, 245, 247, 248),
   ];
 
   // background color, foreground color, font color
   List<Color> lightScene = [
-    const Color(0xFFF2FEFE),
     const Color(0xFFBBE9F3),
+    const Color(0xFFF2FEFE),
     const Color.fromARGB(255, 2, 6, 9),
   ];
 
@@ -44,6 +44,7 @@ class StateModel extends ChangeNotifier {
   }
 
   List<Color> get currentScene => dark ? darkScene : lightScene;
+  bool get currentTheme => dark;
 
   StateModel() {
     _status = "start";
@@ -88,6 +89,12 @@ class StateModel extends ChangeNotifier {
       }
       if(arg == "close"){
         show = false;
+      }
+    }
+
+    if(page == "setting"){
+      if(arg == "theme"){
+        toggleTheme();
       }
     }
   }

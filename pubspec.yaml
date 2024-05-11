@@ -77,6 +77,11 @@ flutter:
     - assets/image/barcode.png
     - assets/image/user.png
     - assets/image/mq-campus-map.png
+    - assets/image/homeDark.png
+    - assets/image/settingsDark.png
+    - assets/image/shoppingDark.png
+    - assets/image/storesDark.png
+    - assets/image/vouchersDark.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -23,7 +23,7 @@ class MQpoint extends StatelessWidget {
         builder: (context, state, child) {
           return Scaffold(
             body: Container(
-              color:const Color(0xFFBBE9F3),
+              color: state.currentScene[0],
               child: switch(state.pageStatus) {
                 "login" => LoginScreen(),
                 "start" => const FirstScreen(),
