@@ -41,9 +41,9 @@ class VoucherScreen extends StatelessWidget {
                   Container(  // white box in the center
                     width: 300.0,
                     height: 650.0,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFF2FEFE),
-                      borderRadius: BorderRadius.only(
+                    decoration: BoxDecoration(
+                      color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFF2FEFE),
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(20.0),
                         topRight: Radius.circular(20.0),
                         bottomLeft: Radius.circular(20.0),
@@ -55,26 +55,17 @@ class VoucherScreen extends StatelessWidget {
                       children: [
                         const SizedBox(height: 20),
 
-                        Text(   // MQ points counter
-                          'MQ POINTS: ${state.currentPoints}',
-                          textDirection: TextDirection.ltr,
-                          style: const TextStyle(
-                            color: Color.fromARGB(255, 2, 6, 9),
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "Italic",
-                          ),
-                        ),
+                        buildContainerF(state, "home", 'MQ POINTS: ${state.currentPoints}', fontColor: const Color(0xFF3794A8)),
                         
                         const SizedBox(height: 20),
 
-                        const SizedBox(   // Display text
+                        SizedBox(   // Display text
                           width: double.infinity,
                           child: Text(
                               "   My vouchers",
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                color: Color.fromARGB(255, 2, 6, 9),
+                                color: state.currentScene[2],
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: "Italic",
@@ -91,20 +82,20 @@ class VoucherScreen extends StatelessWidget {
                           else{
                             return Align(
                       alignment: Alignment.centerLeft,
-                      child: buildContainerC(state, "item", v[0].getName, colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2))               
+                      child: buildContainerD_(state, "item", v[0].getName, colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2))               
                     );
                           }
                         }),
 
                         const SizedBox(height: 20),
 
-                        const SizedBox(   // Display text
+                        SizedBox(   // Display text
                           width: double.infinity,
                           child: Text(
                               "  Expired",
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                color: Color.fromARGB(255, 2, 6, 9),
+                                color: state.currentScene[2],
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: "Italic",

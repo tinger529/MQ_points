@@ -169,6 +169,18 @@ Row buildContainerD(state, String page, String txt, {Color colour = const Color(
     );
   }
 
+// two container C side by side 
+Row buildContainerD_(state, String page, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        buildContainerC(state, page, txt, colour: colour, fontColor: fontColor),
+        const SizedBox(width: 15),
+        const SizedBox(width: 120, height: 120),
+      ],
+    );
+  }
+
 // container for the item
 Container buildContainerE(state, String page, String txt, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
     return Container(
@@ -286,7 +298,7 @@ Container tool(state, String page, String pth) {
       width: 50.0,
       height: 50.0,
       decoration: BoxDecoration(
-        color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFCFDEE0),
+        color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFF2FEFE),
       ),
       child: OutlinedButton(
           onPressed: () => {state.redirect(page)},

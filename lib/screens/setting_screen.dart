@@ -28,7 +28,7 @@ class SettingScreen extends StatelessWidget {
                     height: 650.0,
                     padding: const EdgeInsets.only(left: 25, bottom: 24, right: 25, top: 10),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFF2FEFE),
+                      color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFF2FEFE),
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     child: Column(
@@ -51,8 +51,8 @@ class SettingScreen extends StatelessWidget {
                             Text(
                               "User name\nid:12345678\npoints: ${state.currentPoints}",
                               textAlign: TextAlign.left,
-                              style: const TextStyle(
-                                color: Color.fromARGB(255, 2, 6, 9),
+                              style: TextStyle(
+                                color: state.currentScene[2],
                                 fontSize: 16,
                               ),
                             ),
