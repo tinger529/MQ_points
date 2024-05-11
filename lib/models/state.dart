@@ -19,6 +19,7 @@ class StateModel extends ChangeNotifier {
     const Voucher("Coffee 50% off coupon", 50, "        Embrace the warmth and energy it\n        brings, igniting your day with a burst\n        of invigorating freshness.\n\n        Store: perfect cafe \n        Items: all coffee \n        Expiration date: May 20th, 2024"),
   ];
   bool dark = false;
+  List<String> history = [];
 
   // showing successful message
   bool show = false;
@@ -122,6 +123,12 @@ class StateModel extends ChangeNotifier {
   void redirect(String page, {String arg = ""}){
     _status = page;
     special_handling(page, arg);
+    notifyListeners();
+  }
+
+  void createHistory(voucher){
+    String record = "05.29.2024\n${voucher.name}\n${voucher.points} points";
+    history.add(record);
     notifyListeners();
   }
 
