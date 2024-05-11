@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 import '../models/state.dart';
 
+// ignore: must_be_immutable
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
 
@@ -15,12 +14,16 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(context) {
     return Consumer<StateModel>(
+
       builder: (context, state, child) {
         return Center(
+
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+
               const SizedBox(height: 50),
+
               const Text(
                 'User Login',
                 textDirection: TextDirection.ltr,
@@ -31,7 +34,9 @@ class LoginScreen extends StatelessWidget {
                   fontFamily: "Italic",
                 ),
               ),
+
               const SizedBox(height: 30),
+
               Container(
                 width: 300.0,
                 height: 350.0,
@@ -45,9 +50,11 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 child: Column(
+
                   children: [
                     const SizedBox(height: 50),
                      
+                      state.loginFail ?
                       const SizedBox(
                         width: double.infinity,
                         child: Text(
@@ -58,8 +65,11 @@ class LoginScreen extends StatelessWidget {
                             fontSize: 8,
                           ),
                         ),
-                      ),
+                      )
+                      : Container(),
+
                     const SizedBox(height: 3),
+
                     SizedBox(
                       width: 250,
                       height: 50,
@@ -73,7 +83,10 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+
                     const SizedBox(height: 30),
+
+                    state.loginFail ?
                     const SizedBox(   // Display text
                       width: double.infinity,
                       child: Text(
@@ -84,8 +97,11 @@ class LoginScreen extends StatelessWidget {
                             fontSize: 8,
                           ),
                         ),
-                    ),
+                    )
+                    : Container(),
+
                     const SizedBox(height: 3),
+
                     SizedBox(
                       width: 250,
                       height: 50,
@@ -99,7 +115,9 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+
                     const SizedBox(height: 30),
+
                     ElevatedButton(
                       onPressed: () => {
                         state.login(id, passwd),
@@ -107,10 +125,13 @@ class LoginScreen extends StatelessWidget {
                       },
                       child: const Text('Login'),
                     ),
+
                   ],
                 ),
               ),
+
               const SizedBox(height: 20),
+
               Image.asset(
                 'assets/image/coin.jpeg',
                 width: 200,

@@ -5,7 +5,7 @@ import 'package:mqpoint/models/voucher_model.dart';
 
 class StateModel extends ChangeNotifier {
   
-  String _status = "start";
+  String _status = "start";   // current displayed page
 
   // temporarily store user's data here
   int points = 100;
@@ -17,6 +17,9 @@ class StateModel extends ChangeNotifier {
 
   // showing successful message
   bool show = false;
+
+  // showing login fail message
+  bool loginFail = false;
 
   StateModel() {
     _status = "start";
@@ -35,9 +38,16 @@ class StateModel extends ChangeNotifier {
 
   bool get showSuccess => show;
 
+  bool get showFail => loginFail;
+
   void login(String id, String passwd) {
     if (id != "" && passwd != "") {
       _status = "home";
+      loginFail = false;
+      notifyListeners();
+    }
+    else {
+      loginFail = true;
       notifyListeners();
     }
   }
