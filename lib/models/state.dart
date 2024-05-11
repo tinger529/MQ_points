@@ -52,6 +52,7 @@ class StateModel extends ChangeNotifier {
     }
   }
 
+  // ignore: non_constant_identifier_names
   void special_handling(String page, String arg){
     if(page == "item"){
       if(show == false && arg == "buy" && points >= 50){
@@ -73,27 +74,4 @@ class StateModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  void redirectLogin() {
-    _status = "login";
-  }
-
-  void redirectHome() {
-    _status = "home";
-    notifyListeners();
-  }
-
-  void redirectRedemption() {
-    _status = "redemption";
-    notifyListeners();
-  }
-
-  void redirectItem() {
-    _status = "item";
-    notifyListeners();
-  }
-
-  void redirectEvent() {
-    _status = "event";
-    notifyListeners();
-  }
 }
