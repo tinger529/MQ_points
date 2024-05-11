@@ -1,0 +1,11 @@
+{
+    "users": [
+      {
+        "name": "David",
+        "uid" : "12345678",
+        "points": 100,
+        "voucherfile": "voucher1.json",
+        "dark": false
+      }
+    ]
+}
