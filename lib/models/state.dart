@@ -1,6 +1,5 @@
 import 'dart:collection';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:mqpoint/models/voucher_model.dart';
 
@@ -10,11 +9,11 @@ class StateModel extends ChangeNotifier {
 
   // temporarily store user's data here
   int points = 100;
-  int nvouchers = 2; 
+  int nvouchers = 1; 
   List<Voucher> vouchers = [
-    const Voucher("      Coffee 50% off coupon", 100, "This is a voucher"),
-  //  const Voucher("      Coffee 50% off coupon", 100, "This is a voucher"),
+    const Voucher("Coffee 50% off coupon", 50, "        Embrace the warmth and energy it\n        brings, igniting your day with a burst\n        of invigorating freshness.\n\n        Store: perfect cafe \n        Items: all coffee \n        Expiration date: May 20th, 2024"),
   ];
+  bool dark = false;
 
   // showing successful message
   bool show = false;
@@ -35,8 +34,6 @@ class StateModel extends ChangeNotifier {
     const Color(0xFFF2FEFE),
     const Color.fromARGB(255, 2, 6, 9),
   ];
-
-  bool dark = false;
 
   void toggleTheme(){
     dark = !dark;
