@@ -8,8 +8,8 @@ import 'package:mqpoint/models/voucher_model.dart';
 class VoucherScreen extends StatelessWidget {
   const VoucherScreen({super.key});
 
-  List<List<Voucher>> pair_vouchers(List<Voucher> vouchers){
-    List<List<Voucher>> pairs = [];
+  List<List<dynamic>> pair_vouchers(List<dynamic> vouchers){
+    List<List<dynamic>> pairs = [];
     for(int i = 0; i < vouchers.length; i+=2){
       if(i+1 < vouchers.length){
         pairs.add([vouchers[i], vouchers[i+1]]);

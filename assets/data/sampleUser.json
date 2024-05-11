@@ -4,7 +4,7 @@
         "name": "David",
         "uid" : "12345678",
         "points": 100,
-        "voucherfile": "voucher1.json",
+        "voucherfile": "sampleVoucher.json",
         "dark": false
       }
     ]

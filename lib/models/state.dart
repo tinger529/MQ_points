@@ -13,7 +13,7 @@ class StateModel extends ChangeNotifier {
   // temporarily store user's data here
   int points = 100;
   int nvouchers = 1; 
-  List<Voucher> vouchers = [
+  List<dynamic> vouchers = [
     const Voucher("Coffee 50% off coupon", 50, "        Embrace the warmth and energy it\n        brings, igniting your day with a burst\n        of invigorating freshness.\n\n        Store: perfect cafe \n        Items: all coffee \n        Expiration date: May 20th, 2024"),
   ];
   bool dark = false;
@@ -57,6 +57,9 @@ class StateModel extends ChangeNotifier {
     User user = User.fromJson(jsonMap["users"][0]);
     points = user.points;
     dark = user.dark;
+    String voucherString = await rootBundle.loadString('assets/data/${user.voucherfile}');
+    Map<String, dynamic> voucherList = json.decode(voucherString);
+    vouchers = voucherList["vouchers"].map((e) => Voucher.fromJson(e)).toList();
     // Set to login after 3 seconds
     Future.delayed(const Duration(seconds: 3), () {
       _status = "login";
@@ -66,7 +69,7 @@ class StateModel extends ChangeNotifier {
 
   String get pageStatus => _status;
 
-  List<Voucher> get currentVouchers => UnmodifiableListView(vouchers);
+  List<dynamic> get currentVouchers => UnmodifiableListView(vouchers);
 
   int get currentPoints => points;
 
