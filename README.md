@@ -8,7 +8,19 @@ I've implemented some most important functions in deliverable 1 and improve the 
 
 * **first page**: simulate the screen when you first click on the app. It will wait 3 seconds and direct you to the login page.
 * **login page**: standard login page with password checking and error messages. (For easier testing in MVP, I only check the empty input)
-* **home page**: the home page is shown after you login to the app. It provide quick access button that will direct you to different pages.
+* **home page**: the home page is shown after you login to the app. It provide quick access buttons that will direct you to different pages.
+* **shopping page**: display different kinds of vouchers.
+* **voucher page**: display all vouchers you have so far, including expired vouchers.
+
+Feature functions:
+
+* Support dark scene mode
+* Provide history checking
+
+Testing:
+
+* unit testing and widget testing for each screen
+* integration test for some core functionalities
 
 
 ## Developed device
