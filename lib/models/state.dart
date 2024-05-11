@@ -1,11 +1,18 @@
 import 'dart:collection';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:mqpoint/models/voucher_model.dart';
+import 'package:mqpoint/models/user_model.dart';
+
+import '../data/sampleUser.json';
+import '../data/sampleVoucher.json';
 
 class StateModel extends ChangeNotifier {
   
   String _status = "start";   // current displayed page
+
+  User user;
 
   // temporarily store user's data here
   int points = 100;
@@ -43,8 +50,10 @@ class StateModel extends ChangeNotifier {
   List<Color> get currentScene => dark ? darkScene : lightScene;
   bool get currentTheme => dark;
 
-  StateModel() {
+  StateModel() : user = User.fromJson(const JsonDecoder().convert('../data/sampleUser.json')) {
     _status = "start";
+    points = user.points;
+    dark = user.dark;
     // set to login after 5 seconds
     Future.delayed(const Duration(seconds: 3), () {
       _status = "login";
