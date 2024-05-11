@@ -5,7 +5,7 @@
         "uid" : "12345678",
         "points": 100,
         "voucherfile": "sampleVoucher.json",
-        "dark": false
+        "dark": true
       }
     ]
 }

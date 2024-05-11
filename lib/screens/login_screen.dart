@@ -24,11 +24,11 @@ class LoginScreen extends StatelessWidget {
 
               const SizedBox(height: 50),
 
-              const Text(
+              Text(
                 'User Login',
                 textDirection: TextDirection.ltr,
                 style: TextStyle(
-                  color: Color.fromARGB(255, 2, 6, 9),
+                  color: state.currentScene[2],
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                   fontFamily: "Italic",
@@ -41,7 +41,7 @@ class LoginScreen extends StatelessWidget {
                 width: 300.0,
                 height: 350.0,
                 decoration: const BoxDecoration(
-                  color: Colors.white,
+                  color: Color(0xFFF2FEFE),
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20.0),
                     topRight: Radius.circular(20.0),
