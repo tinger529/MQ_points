@@ -49,7 +49,7 @@ class SettingScreen extends StatelessWidget {
                             const SizedBox(width: 30),
                             
                             Text(
-                              "User name\nid:12345678\npoints: ${state.currentPoints}",
+                              "${state.currentName}\nid:${state.currentUid}\npoints: ${state.currentPoints}",
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 color: state.currentScene[2],

@@ -11,6 +11,8 @@ class StateModel extends ChangeNotifier {
   String _status = "start";   // current displayed page
 
   // temporarily store user's data here
+  String name = "John Doe";
+  String uid = "00000000";
   int points = 100;
   int nvouchers = 1; 
   List<dynamic> vouchers = [
@@ -57,6 +59,8 @@ class StateModel extends ChangeNotifier {
     User user = User.fromJson(jsonMap["users"][0]);
     points = user.points;
     dark = user.dark;
+    name = user.name;
+    uid = user.uid;
     String voucherString = await rootBundle.loadString('assets/data/${user.voucherfile}');
     Map<String, dynamic> voucherList = json.decode(voucherString);
     vouchers = voucherList["vouchers"].map((e) => Voucher.fromJson(e)).toList();
@@ -76,6 +80,10 @@ class StateModel extends ChangeNotifier {
   bool get showSuccess => show;
 
   bool get showFail => loginFail;
+
+  String get currentName => name;
+
+  String get currentUid => uid;
 
   void login(String id, String passwd) {
     if (id != "" && passwd != "") {
@@ -118,7 +126,7 @@ class StateModel extends ChangeNotifier {
   }
 
   // write new points to the user's json file
-  
+
 
 
 }
