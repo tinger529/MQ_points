@@ -25,9 +25,9 @@ class RedemptionScreen extends StatelessWidget {
                   Container(  // white box in the center
                     width: 300.0,
                     height: 650.0,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFF2FEFE),
-                      borderRadius: BorderRadius.only(
+                    decoration: BoxDecoration(
+                      color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFCFDEE0),
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(20.0),
                         topRight: Radius.circular(20.0),
                         bottomLeft: Radius.circular(20.0),
@@ -43,13 +43,13 @@ class RedemptionScreen extends StatelessWidget {
                         
                         const SizedBox(height: 20),
 
-                        const SizedBox(   // Display text
+                        SizedBox(   // Display text
                           width: double.infinity,
                           child: Text(
                               "    March special",
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                color: Color.fromARGB(255, 2, 6, 9),
+                                color: state.currentScene[2],
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: "Italic",
@@ -67,13 +67,13 @@ class RedemptionScreen extends StatelessWidget {
 
                         const SizedBox(height: 20),
 
-                        const SizedBox(   // Display text
+                        SizedBox(   // Display text
                           width: double.infinity,
                           child: Text(
                               "    Popular",
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                color: Color.fromARGB(255, 2, 6, 9),
+                                color: state.currentScene[2],
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: "Italic",

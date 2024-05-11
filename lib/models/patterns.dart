@@ -117,9 +117,9 @@ Container buildContainerC(state, String page, String txt, {Color colour = const 
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 2,
+            spreadRadius: state.currentTheme ? 4:2,
             blurRadius: 3,
-            offset: const Offset(1, 1), // changes position of shadow
+            offset: state.currentTheme ? const Offset(0, 0) : const Offset(1, 1), // changes position of shadow
           ),
         ],
       ),
