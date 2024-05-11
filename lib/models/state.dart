@@ -117,4 +117,8 @@ class StateModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  // write new points to the user's json file
+  
+
+
 }

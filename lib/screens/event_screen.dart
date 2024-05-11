@@ -56,15 +56,15 @@ class EventScreen extends StatelessWidget {
 
                         const SizedBox(height: 30),
 
-                        buildContainerB(state, "home", 'one day gym full access', 'assets/image/gym.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                        buildContainerB(state, "event_detail", 'one day gym full access', 'assets/image/gym.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
 
                         const SizedBox(height: 30),
 
-                        buildContainerB(state, "home", 'one day gym full access', 'assets/image/gym.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                        buildContainerB(state, "event_detail", 'one day gym full access', 'assets/image/gym.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
 
                         const SizedBox(height: 30),
 
-                        buildContainerB(state, "home", 'one day gym full access', 'assets/image/gym.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                        buildContainerB(state, "event_detail", 'one day gym full access', 'assets/image/gym.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
                       ],
                   ),
                 ),
