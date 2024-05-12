@@ -23,6 +23,7 @@ class StateModel extends ChangeNotifier {
 
   // showing successful message
   bool show = false;
+  String msg = "Redeem successfully!";
 
   // showing login fail message
   bool loginFail = false;
@@ -80,6 +81,8 @@ class StateModel extends ChangeNotifier {
 
   bool get showSuccess => show;
 
+  String get currentMsg => msg;
+
   bool get showFail => loginFail;
 
   String get currentName => name;
@@ -101,12 +104,19 @@ class StateModel extends ChangeNotifier {
   // ignore: non_constant_identifier_names
   void special_handling(String page, String arg){
     if(page == "item"){
-      if(show == false && arg == "buy" && points >= 50){
-        points -= 50;
-        vouchers.add(const Voucher("      Coffee 50% off coupon", 100, "This is a voucher"));
-        nvouchers++;
-        notifyListeners();
-        show = true;
+      if(show == false && arg == "buy"){
+        if( points >= 50){
+          points -= 50;
+          vouchers.add(const Voucher("      Coffee 50% off coupon", 100, "This is a voucher"));
+          nvouchers++;
+          msg = "Redeem successfully!";
+          notifyListeners();
+          show = true;
+        }
+        else{
+          msg = "Not enough points!";
+          show = true;
+        }
       }
       if(arg == "close"){
         show = false;

@@ -39,7 +39,7 @@ class RedemptionScreen extends StatelessWidget {
                       children: [
                         const SizedBox(height: 20),
 
-                        buildContainerF(state, "home", 'MQ POINTS: ${state.currentPoints}', fontColor: const Color(0xFF3794A8)),
+                        buildContainerF(state, "redemption", 'MQ POINTS: ${state.currentPoints}', fontColor: const Color(0xFF3794A8)),
                         
                         const SizedBox(height: 20),
 

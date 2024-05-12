@@ -131,7 +131,7 @@ class ItemScreen extends StatelessWidget {
               Positioned.fill(
                 child: Align(
                   alignment: Alignment.center,
-                  child: buildContainerG(state, "item", "Redeem successfully!", arg: "close")               
+                  child: buildContainerG(state, "item", state.currentMsg, arg: "close")               
                 ),
               )
               : Container(),
