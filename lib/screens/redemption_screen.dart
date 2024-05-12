@@ -12,11 +12,12 @@ class RedemptionScreen extends StatelessWidget {
     return Consumer<StateModel>(
       builder: (context, state, child) {
 
-        return Stack(
+        return SingleChildScrollView( child: Stack(
           children: [
 
             Center(
-              child: Column(
+              child:  SingleChildScrollView(
+  scrollDirection: Axis.horizontal, child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
 
@@ -24,7 +25,7 @@ class RedemptionScreen extends StatelessWidget {
 
                   Container(  // white box in the center
                     width: 300.0,
-                    height: 650.0,
+                    height: 700.0,
                     decoration: BoxDecoration(
                       color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFF2FEFE),
                       borderRadius: const BorderRadius.only(
@@ -87,8 +88,9 @@ class RedemptionScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                   const SizedBox(height: 40),
                 ]
-              )
+              ))
             ),
             
             Positioned.fill(
@@ -98,7 +100,7 @@ class RedemptionScreen extends StatelessWidget {
               child: toolbar(state),               
             ),
           ),
-        ]);
+        ]));
       }
     );
   }

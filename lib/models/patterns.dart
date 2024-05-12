@@ -139,8 +139,8 @@ Container buildContainerC(state, String page, String txt, {Color colour = const 
             children: [
               Image.asset(
                 'assets/image/coffee.png',
-                width: 120,
-                height: 80,
+                width: 100,
+                height: 60,
               ),
               const SizedBox(height: 4),
               Text(
