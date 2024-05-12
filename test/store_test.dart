@@ -7,7 +7,7 @@ import 'package:mqpoint/models/state.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  testWidgets('SettingScreen Renders Correctly', (WidgetTester tester) async {
+  testWidgets('StoreScreen Renders Correctly', (WidgetTester tester) async {
   
     final state = StateModel();
 
@@ -16,8 +16,9 @@ void main() {
       MaterialApp(
         home: ChangeNotifierProvider(
           create: (context) => state,
-          child: StoreScreen(),
-        ),
+          child: Scaffold(
+            body:StoreScreen(),
+        )),
       ),
     );
 
