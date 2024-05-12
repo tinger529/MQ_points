@@ -6,11 +6,21 @@ MQ Points is an useful app aiming to help students and staff members in Macquari
 
 I've implemented some most important functions in deliverable 1 and improve the UI. Following is the implemented pages and functions:
 
-* **first page**: simulate the screen when you first click on the app. It will wait 3 seconds and direct you to the login page.
-* **login page**: standard login page with password checking and error messages. (For easier testing in MVP, I only check the empty input)
+#### five main pages
+
 * **home page**: the home page is shown after you login to the app. It provide quick access buttons that will direct you to different pages.
 * **shopping page**: display different kinds of vouchers.
 * **voucher page**: display all vouchers you have so far, including expired vouchers.
+* **store page**: display mq map. In this MVP, the searching box is not yet functioning.
+* **setting page**: allow mode switching, history checking.
+
+#### other pages
+
+* **first page**: simulate the screen when you first click on the app. It will wait 3 seconds and direct you to the login page.
+* **login page**: standard login page with password checking and error messages. (For easier testing in MVP, I only check the empty input)
+* **event pages and sale pages**: display events and sale events
+* **item page and use item pages**: provide item details and item QRcode
+
 
 Feature functions:
 

@@ -51,7 +51,7 @@ class StateModel extends ChangeNotifier {
   bool get currentTheme => dark;
 
   StateModel() {
-    _status = "start";
+    _status = "login";    // set to "start" to enable first page !
     loadUser();
   }
 
@@ -66,7 +66,7 @@ class StateModel extends ChangeNotifier {
     String voucherString = await rootBundle.loadString('assets/data/${user.voucherfile}');
     Map<String, dynamic> voucherList = json.decode(voucherString);
     vouchers = voucherList["vouchers"].map((e) => Voucher.fromJson(e)).toList();
-    // Set to login after 3 seconds
+    // Set to login after 3 seconds (! uncomment followong lines to enable first page !)
     // Future.delayed(const Duration(seconds: 0), () {
     //   _status = "login";
     //   notifyListeners();
