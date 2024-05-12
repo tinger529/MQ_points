@@ -41,7 +41,7 @@ class UseVoucherScreen extends StatelessWidget {
 
                         const SizedBox(height: 50),
 
-                        buildContainerE(state, "item", 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                        buildContainerE(state, "use", 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
 
                         const SizedBox(height: 20),
 

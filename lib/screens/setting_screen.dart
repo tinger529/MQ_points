@@ -69,7 +69,7 @@ class SettingScreen extends StatelessWidget {
 
                         const SizedBox(height: 10),
 
-                        buildContainerF(state, "contact", "Contact Us"),
+                        buildContainerF(state, "setting", "Contact Us"),
 
                         const SizedBox(height: 10),
 
