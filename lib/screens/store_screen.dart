@@ -15,7 +15,7 @@ class StoreScreen extends StatelessWidget {
     return Consumer<StateModel>(
       builder: (context, state, child) {
 
-        return Stack(
+        return SingleChildScrollView( child:Stack(
           children: [
 
             Center(
@@ -27,7 +27,7 @@ class StoreScreen extends StatelessWidget {
 
                   Container(
                     width: 300.0,
-                    height: 650.0,
+                    height: 700.0,
                     padding: const EdgeInsets.only(left: 25, bottom: 24, right: 25, top: 10),
                     decoration: BoxDecoration(
                       color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFF2FEFE),
@@ -74,6 +74,7 @@ class StoreScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  const SizedBox(height: 40),
                 ],
               ),
             ),
@@ -85,7 +86,7 @@ class StoreScreen extends StatelessWidget {
               ),
             ),
           ],
-        );
+        ));
       },
     );
   }

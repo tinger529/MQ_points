@@ -28,7 +28,7 @@ class VoucherScreen extends StatelessWidget {
 
         var vouchers = pair_vouchers(state.currentVouchers);
 
-        return Stack(
+        return SingleChildScrollView( child: Stack(
           children: [
             Center(
 
@@ -40,7 +40,7 @@ class VoucherScreen extends StatelessWidget {
 
                   Container(  // white box in the center
                     width: 300.0,
-                    height: 650.0,
+                    height: 700.0,
                     decoration: BoxDecoration(
                       color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFF2FEFE),
                       borderRadius: const BorderRadius.only(
@@ -117,6 +117,7 @@ class VoucherScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  const SizedBox(height: 40),
                 ]
               )
             ),
@@ -128,7 +129,7 @@ class VoucherScreen extends StatelessWidget {
                 child: toolbar(state),               
               ),
             ),
-          ]);
+          ]));
       }
     );
   }

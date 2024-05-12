@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
     return Consumer<StateModel>(
 
       builder: (context, state, child) {
-        return Center(
+        return SingleChildScrollView( child: Center(
 
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -128,6 +128,7 @@ class LoginScreen extends StatelessWidget {
 
                   ],
                 ),
+                
               ),
 
               const SizedBox(height: 20),
@@ -138,9 +139,11 @@ class LoginScreen extends StatelessWidget {
                 height: 150,
                 opacity: const AlwaysStoppedAnimation(.8),
               ),
+
+              const SizedBox(height: 100),
             ]
       )
-    );
+    ));
       }
     );
   }

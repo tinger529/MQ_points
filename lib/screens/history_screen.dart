@@ -12,7 +12,7 @@ class HistoryScreen extends StatelessWidget {
     return Consumer<StateModel>(
       builder: (context, state, child) {
 
-        return Stack(
+        return SingleChildScrollView( child: Stack(
           children: [
 
             Center(
@@ -71,6 +71,7 @@ class HistoryScreen extends StatelessWidget {
                       ],
                       ),
                     ),
+                    const SizedBox(height: 40),
                   ]
                 )
               ),
@@ -110,7 +111,7 @@ class HistoryScreen extends StatelessWidget {
                 ),
               )
               : Container(),
-            ]);
+            ]));
           }
     );
   }
