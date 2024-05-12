@@ -83,7 +83,7 @@ class HomeScreen extends StatelessWidget {
 
                       const SizedBox(height: 20),
 
-                      buildContainerB(state, "event", 'Winning at most 1000 po...', 'assets/image/library.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                      buildContainerB(state, "earn", 'Winning at most 1000 po...', 'assets/image/library.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
                     ],
                   ),
                 ),

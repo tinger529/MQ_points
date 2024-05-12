@@ -7,6 +7,7 @@ import 'package:mqpoint/screens/home_screen.dart';
 import 'package:mqpoint/screens/redemption_screen.dart';
 import 'package:mqpoint/screens/item_screen.dart';
 import 'package:mqpoint/screens/event_screen.dart';
+import 'package:mqpoint/screens/earn_screen.dart';
 import 'package:mqpoint/screens/voucher_screen.dart';
 import 'package:mqpoint/screens/setting_screen.dart';
 import 'package:mqpoint/screens/store_screen.dart';
@@ -38,6 +39,7 @@ class MQpoint extends StatelessWidget {
                 "setting" => const SettingScreen(),
                 "stores" => StoreScreen(),
                 "use" => const UseVoucherScreen(),
+                "earn" => const EarnScreen(),
                 _ => const HomeScreen(),
                 }
               )
