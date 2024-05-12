@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
     return Consumer<StateModel>(
       builder: (context, state, child) {
 
-        return Stack(
+        return SingleChildScrollView( child: Stack(
           children: [
 
           Center(
@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
 
                 Container(
                   width: 300.0,
-                  height: 650.0,
+                  height: 700.0,
                   decoration: BoxDecoration(
                     color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFF2FEFE),
                     borderRadius: const BorderRadius.only(
@@ -87,6 +87,8 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
+
+                const SizedBox(height: 40),
               ]
             )
           ),
@@ -95,11 +97,11 @@ class HomeScreen extends StatelessWidget {
             top: 600,
             child: Align(
               alignment: Alignment.centerRight,
-              child: toolbar(state),               
+                child:toolbar(state),              
             ),
           ),
 
-        ]);
+        ]));
       }
     );
   }

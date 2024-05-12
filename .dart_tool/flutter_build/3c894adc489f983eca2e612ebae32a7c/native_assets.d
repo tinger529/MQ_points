@@ -1,0 +1,1 @@
+ /Users/xujinting/Desktop/AppDev/Programs/comp3130-major-work-tinger529/.dart_tool/flutter_build/3c894adc489f983eca2e612ebae32a7c/native_assets.yaml: 

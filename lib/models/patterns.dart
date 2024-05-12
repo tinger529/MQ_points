@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 Container buildContainerA(state, String page, String txt, {Color colour = const Color(0xFF6FC5C5), Color fontColor = const Color(0xFFA83759), String arg = ""}) {
     return Container(
       width: 240.0,
-      height: 120.0,
+      height: 100.0,
       decoration: BoxDecoration(
         color: colour,
         borderRadius: const BorderRadius.only(
@@ -50,7 +50,7 @@ Container buildContainerA(state, String page, String txt, {Color colour = const 
 Container buildContainerB(state, String page, String txt, String img, {Color colour = const Color(0xFFCFDEE0), Color fontColor = const Color.fromARGB(255, 7, 1, 2)}) {
     return Container(
       width: 240.0,
-      height: 120.0,
+      height: 150.0,
       decoration: BoxDecoration(
         color: colour,
         borderRadius: const BorderRadius.only(
