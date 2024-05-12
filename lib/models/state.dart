@@ -77,6 +77,8 @@ class StateModel extends ChangeNotifier {
 
   List<dynamic> get currentVouchers => UnmodifiableListView(vouchers);
 
+  List<String> get currentHistory => UnmodifiableListView(history);
+
   int get currentPoints => points;
 
   bool get showSuccess => show;
@@ -107,9 +109,10 @@ class StateModel extends ChangeNotifier {
       if(show == false && arg == "buy"){
         if( points >= 50){
           points -= 50;
-          vouchers.add(const Voucher("      Coffee 50% off coupon", 100, "This is a voucher"));
+          vouchers.add(const Voucher("Coffee 50% off coupon", 100, "This is a voucher"));
           nvouchers++;
           msg = "Redeem successfully!";
+          createHistory(vouchers.last);
           notifyListeners();
           show = true;
         }

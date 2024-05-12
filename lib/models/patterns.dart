@@ -329,6 +329,42 @@ Container buildContainerH(state, String page, String txt, {Color colour = const 
       ));
   }
 
+// container for history record
+Container buildContainerI(state, String page, String txt, {Color colour = const Color(0xFFE0F0F0), Color fontColor = const Color(0xFF7C8081), String arg = ""}) {
+    return Container(
+      width: 240.0,
+      height: 80.0,
+      decoration: BoxDecoration(
+        color: colour,
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(20.0),
+          topRight: Radius.circular(20.0),
+          bottomLeft: Radius.circular(20.0),
+          bottomRight: Radius.circular(20.0),
+        ),
+      ),
+      child: OutlinedButton(
+          onPressed: () => {state.redirect(page, arg: arg)},
+          style: OutlinedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            side: const BorderSide(
+              color: Colors.transparent,
+            ),
+          ),
+          child: Text(
+              txt,
+              textDirection: TextDirection.ltr,
+              style: TextStyle(
+                color: fontColor,
+                fontSize: 12,
+              ),
+              ),
+    ),
+      );
+  }
+
 // tool
 Container tool(state, String page, String pth) {
     return Container(
