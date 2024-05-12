@@ -11,6 +11,7 @@ import 'package:mqpoint/screens/voucher_screen.dart';
 import 'package:mqpoint/screens/setting_screen.dart';
 import 'package:mqpoint/screens/store_screen.dart';
 import 'package:mqpoint/screens/event_detail_screen.dart';
+import 'package:mqpoint/screens/use_voucher_screen.dart';
 import 'models/state.dart';
 
 
@@ -36,6 +37,7 @@ class MQpoint extends StatelessWidget {
                 "voucher" => const VoucherScreen(),
                 "setting" => const SettingScreen(),
                 "stores" => StoreScreen(),
+                "use" => const UseVoucherScreen(),
                 _ => const HomeScreen(),
                 }
               )

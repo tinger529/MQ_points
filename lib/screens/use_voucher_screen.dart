@@ -92,7 +92,7 @@ class UseVoucherScreen extends StatelessWidget {
 
                         const SizedBox(height: 20),
 
-                        buildContainerA(state, "item", 'Show QR code', arg: "buy"),
+                        buildContainerA(state, "use", 'Show QR code', arg: "show"),
                       ],
                       ),
                     ),
@@ -131,7 +131,7 @@ class UseVoucherScreen extends StatelessWidget {
               Positioned.fill(
                 child: Align(
                   alignment: Alignment.center,
-                  child: buildContainerG(state, "item", "Redeem successfully!", arg: "close")               
+                  child: qrcode(state, "use", "Redeem successfully!", arg: "close")             
                 ),
               )
               : Container(),

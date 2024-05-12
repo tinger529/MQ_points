@@ -113,6 +113,15 @@ class StateModel extends ChangeNotifier {
       }
     }
 
+    if(page == "use"){
+      if(show == false && arg == "show"){
+        show = true;
+      }
+      if(arg == "close"){
+        show = false;
+      }
+    }
+
     if(page == "setting"){
       if(arg == "theme"){
         toggleTheme();

@@ -77,12 +77,12 @@ class VoucherScreen extends StatelessWidget {
 
                         ...vouchers.map((v) {
                           if(v.length == 2){
-                            return buildContainerD(state, "item", v[0].getName, colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2));
+                            return buildContainerD(state, "use", v[0].getName, colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2));
                           } 
                           else{
                             return Align(
                       alignment: Alignment.centerLeft,
-                      child: buildContainerD_(state, "item", v[0].getName, colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2))               
+                      child: buildContainerD_(state, "use", v[0].getName, colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2))               
                     );
                           }
                         }),

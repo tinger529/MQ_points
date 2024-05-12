@@ -84,6 +84,7 @@ flutter:
     - assets/image/vouchersDark.png
     - assets/data/sampleUser.json
     - assets/data/sampleVoucher.json
+    - assets/image/QRcode.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -392,3 +392,35 @@ Row toolbar(state) {
       ],
     );
   }
+
+  Container qrcode(state, String page, String txt, {Color colour = const Color(0xFFFDFBFB), Color fontColor = const Color.fromARGB(255, 7, 1, 2), String arg = ""}) {
+    return Container(
+      width: 160.0,
+      height: 160.0,
+      decoration: BoxDecoration(
+        color: colour,
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(20.0),
+          topRight: Radius.circular(20.0),
+          bottomLeft: Radius.circular(20.0),
+          bottomRight: Radius.circular(20.0),
+        ),
+      ),
+      child: OutlinedButton(
+          onPressed: () => {state.redirect(page, arg: arg)},
+          style: OutlinedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            side: const BorderSide(
+              color: Colors.transparent,
+            ),
+          ),
+          child: Image.asset(
+            'assets/image/QRcode.png',
+            width: 160,
+            height: 160,
+          ),
+    ),
+      );
+  }
