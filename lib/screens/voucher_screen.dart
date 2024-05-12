@@ -32,7 +32,8 @@ class VoucherScreen extends StatelessWidget {
           children: [
             Center(
 
-              child: Column(
+              child: SingleChildScrollView(
+  scrollDirection: Axis.horizontal, child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
 
@@ -51,7 +52,7 @@ class VoucherScreen extends StatelessWidget {
                       ),
                     ),
 
-                    child: Column(
+                    child:  Column(
                       children: [
                         const SizedBox(height: 20),
 
@@ -112,14 +113,14 @@ class VoucherScreen extends StatelessWidget {
 
                         const SizedBox(height: 20),
 
-                        buildContainerD(state, "use", 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
+                        buildContainerD(state, "use", 'Coffee 50% off', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2)),
                           
                       ],
                     ),
                   ),
                   const SizedBox(height: 40),
                 ]
-              )
+              ))
             ),
 
             Positioned.fill(
