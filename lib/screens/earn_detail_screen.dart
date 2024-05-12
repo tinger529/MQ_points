@@ -4,8 +4,8 @@ import 'package:provider/provider.dart';
 import '../models/state.dart';
 import '../models/patterns.dart';
 
-class EventDetailScreen extends StatelessWidget {
-  const EventDetailScreen({super.key});
+class EarnDetailScreen extends StatelessWidget {
+  const EarnDetailScreen({super.key});
   
   @override
   Widget build(context) {
@@ -42,14 +42,14 @@ class EventDetailScreen extends StatelessWidget {
 
                         const SizedBox(height: 30),
 
-                        buildContainerH(state, "event_detail", 'Coffee 50% off coupon', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2), img: 'assets/image/gym.png'),
+                        buildContainerH(state, "earn_detail", 'assets/image/library.png', colour: const Color(0xFFCFDEE0), fontColor: const Color.fromARGB(255, 7, 1, 2), img: 'assets/image/library.png'),
 
                         const SizedBox(height: 20),
 
                         SizedBox(   // Display text
                           width: double.infinity,
                           child: Text(
-                              "One Day Gym Full Access!\nWorkout with us!",
+                              "Winning at most 1000 points in\nthe library monthly event!",
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 color: state.currentScene[2],
@@ -66,7 +66,7 @@ class EventDetailScreen extends StatelessWidget {
                         SizedBox(   // Display text
                           width: double.infinity,
                           child: Text(
-                              "Dive into a world of health and wellness as you explore our state-of-the-art facilities and join invigorating group classes led by expert instructors. \n\nDiscover the motivation you need to kickstart your fitness journey and unlock your full potential. Don't miss this opportunity to sweat, smile, and transform your day, all on us!\n\nLocation: MQ sports center\ndate: May 1th, 2024 -\nMay 31th, 2024",
+                              "Join our thrilling monthly library event and seize the opportunity to win big!\n\nScore up to 1000 points as you engage with our diverse collection of books, participate in exciting challenges, and unlock exclusive rewards. \n\nLocation: MQ library\n\ndate: May 1th, 2024 -\nMay 31th, 2024",
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 color: state.currentScene[2],
@@ -89,34 +89,6 @@ class EventDetailScreen extends StatelessWidget {
                   child: toolbar(state),               
                 ),
               ),
-
-              state.showSuccess ?
-              Center(
-
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-
-                  Container(
-                    width: double.infinity,
-                    height: MediaQuery.of(context).size.height,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFD9D9D9).withOpacity(0.8),
-                    ),
-                    ),
-                  ]
-                )
-              )
-              : Container(),
-
-              state.showSuccess ? 
-              Positioned.fill(
-                child: Align(
-                  alignment: Alignment.center,
-                  child: buildContainerG(state, "item", "Redeem successfully!", arg: "close")               
-                ),
-              )
-              : Container(),
             ]);
           }
     );
