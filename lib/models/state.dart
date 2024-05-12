@@ -67,10 +67,10 @@ class StateModel extends ChangeNotifier {
     Map<String, dynamic> voucherList = json.decode(voucherString);
     vouchers = voucherList["vouchers"].map((e) => Voucher.fromJson(e)).toList();
     // Set to login after 3 seconds
-    // Future.delayed(const Duration(seconds: 0), () {
-    //   _status = "login";
-    //   notifyListeners();
-    // });
+    Future.delayed(const Duration(seconds: 0), () {
+      _status = "login";
+      notifyListeners();
+    });
   }
 
   String get pageStatus => _status;

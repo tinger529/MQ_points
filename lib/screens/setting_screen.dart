@@ -13,11 +13,12 @@ class SettingScreen extends StatelessWidget {
     return Consumer<StateModel>(
       builder: (context, state, child) {
 
-        return Stack(
+        return SingleChildScrollView( child: Stack(
           children: [
 
             Center(
-              child: Column(
+              child: SingleChildScrollView(
+  scrollDirection: Axis.horizontal, child:Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
 
@@ -25,7 +26,7 @@ class SettingScreen extends StatelessWidget {
 
                   Container(
                     width: 300.0,
-                    height: 650.0,
+                    height: 700.0,
                     padding: const EdgeInsets.only(left: 25, bottom: 24, right: 25, top: 10),
                     decoration: BoxDecoration(
                       color: state.currentTheme ? const Color(0xFF073636) : const Color(0xFFF2FEFE),
@@ -42,11 +43,11 @@ class SettingScreen extends StatelessWidget {
 
                             Image.asset(
                               'assets/image/user.png',
-                              width: 100,
-                              height: 100,
+                              width: 50,
+                              height: 50,
                             ),
 
-                            const SizedBox(width: 30),
+                            const SizedBox(width: 20),
                             
                             Text(
                               "${state.currentName}\nid:${state.currentUid}\npoints: ${state.currentPoints}",
@@ -77,8 +78,9 @@ class SettingScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  const SizedBox(height: 40),
                 ],
-              ),
+              )),
             ),
             Positioned.fill(
               top: 600,
@@ -88,7 +90,7 @@ class SettingScreen extends StatelessWidget {
               ),
             ),
           ],
-        );
+        ));
       },
     );
   }
